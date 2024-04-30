@@ -14,6 +14,56 @@
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   
+    <style>
+      .isotope-filters-list li {
+        display: inline-block;
+        margin-right: 10px; /* Espacio entre los botones */
+      }
+    
+      .isotope-filters-list li a {
+        display: inline-block;
+        padding: 10px 20px; /* Ajusta el padding según sea necesario */
+        background-color: #c2c2c2; /* Color de fondo de los botones sin seleccionar */
+        color: #2e5393; /* Color del texto de los botones sin seleccionar */
+        border-radius: 5px; /* Bordes redondeados */
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave del color de fondo y del color del texto */
+        font-size: 16px; /* Tamaño de letra */
+      }
+    
+      .isotope-filters-list li a:hover {
+        background-color: #2e5393; /* Cambia el color de fondo al pasar el cursor */
+        color: #fff; /* Cambia el color del texto al pasar el cursor */
+      }
+    
+      .isotope-filters-list li a.active {
+        background-color: #2e5393; /* Color de fondo de los botones seleccionados */
+        color: #fff; /* Color del texto de los botones seleccionados */
+      }
+    </style>
+
+    <style>
+      /* Color de fondo del navbar cuando se desplaza */
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck,
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-submenu,
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-dropdown {
+        background-color: #adbddd; /* Color gris claro */
+      }
+
+      /* Color de fondo del navbar al estar fijo */
+      .rd-navbar.rd-navbar-static,
+      .rd-navbar.rd-navbar-static .rd-navbar-submenu,
+      .rd-navbar.rd-navbar-static .rd-navbar-dropdown {
+        background-color: #adbddd; /* Color gris claro */
+      }
+    </style>
+
+
+
+    
+    
+    
+
   <!-- Geolocalización -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -273,9 +323,9 @@
         </header>
 
         <!-- Swiper-->
-        <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="2250" data-simulate-touch="true" data-direction="horizontal" data-nav="false">
+        <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="3500" data-simulate-touch="true" data-direction="horizontal" data-nav="false">
           <div class="swiper-wrapper text-center">
-            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x742.jpg">
+            <div class="swiper-slide" data-slide-bg="images/slider1.jpg">
               <div class="swiper-slide-caption section-md">
                 <div class="container">
                   <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Soluciones tecnológicas <br>a la medida</h1>
@@ -287,7 +337,7 @@
             <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x7422.jpg">
               <div class="swiper-slide-caption section-md">
                 <div class="container">
-                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Empresa líder en <br>radio comunicación <br>en la región</h1>
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Empresa líder en <br>radiocomunicación <br>en la región</h1>
                   <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100"><b>AMK Trading</b> implementa tecnología de punta para proyectos de radiocomunicación, así como integración de sistemas de comunicaciones troncalizadas</p> -->
                   <a class="button button-primary button-ujarak" href="#contacts" data-caption-animate="fadeInUp" data-caption-delay="200">¡Contáctanos!</a>
                 </div>
@@ -331,17 +381,26 @@
             <div class="col-md-7 col-lg-5 col-xl-6 text-lg-left wow fadeInUp"><img src="images/index-1-415x592.png" alt="" width="415" height="592"/></div>
             <div class="col-lg-7 col-xl-6">
               <div class="row row-30">
-                <div class="col-sm-6 wow fadeInRight">
+                <!-- <div class="col-sm-6 wow fadeInRight">
                   <article class="box-icon-modern box-icon-modern-custom">
                     <div>
                       <h3 class="box-icon-modern-big-title">Lo que Ofrecemos</h3>
                       <div class="box-icon-modern-decor"></div><a class="button button-primary button-ujarak" class="section swiper-container swiper-slider swiper-slider-classic" href="#services2">Ver Servicios</a>
                     </div>
                   </article>
+                </div> -->
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".1s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <img src="images/temporal/radio.png" alt="">
+                    <h5 class="box-icon-modern-title"><a href="#" onclick="javascript:return false;">VENTA <br>DE RADIOS</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Amplia gama en radio comunicadores a tu alcance para toda situación.</p>
+                </article>
                 </div>
                 <div class="col-sm-6 wow fadeInRight" data-wow-delay=".1s">
                   <article class="box-icon-modern box-icon-modern-2">
-                    <div class="box-icon-modern-icon linearicons-antenna"></div>
+                    <!-- <div class="box-icon-modern-icon linearicons-antenna"></div> -->
+                    <img src="images/temporal/antena.png" alt="">
                     <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN DE SITIOS DE REPETICIÓN</a></h5>
                     <div class="box-icon-modern-decor"></div>
                     <p class="box-icon-modern-text">Cumpliendo con los mayores estándares de calidad y normas de la industria.</p>
@@ -349,7 +408,8 @@
                 </div>
                 <div class="col-sm-6 wow fadeInRight" data-wow-delay=".2s">
                   <article class="box-icon-modern box-icon-modern-2">
-                    <div class="box-icon-modern-icon linearicons-thumbs-up2"></div>
+                    <!-- <div class="box-icon-modern-icon linearicons-thumbs-up2"></div> -->
+                    <img src="images/temporal/energia.png" alt="">
                     <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN DE SOLUCIONES DE ENERGÍA</a></h5>
                     <div class="box-icon-modern-decor"></div>
                     <p class="box-icon-modern-text">Contamos con personal certificado en <b>"Motorola Solutions"</b> para ajustar los parámetros a sus sistemas.</p>
@@ -357,7 +417,8 @@
                 </div>
                 <div class="col-sm-6 wow fadeInRight" data-wow-delay=".3s">
                   <article class="box-icon-modern box-icon-modern-2">
-                    <div class="box-icon-modern-icon linearicons-wrench"></div>
+                    <!-- <div class="box-icon-modern-icon linearicons-wrench"></div> -->
+                    <img src="images/temporal/soporte.png" alt="">
                     <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN Y SOPORTE DE SITIOS DE REPETICIÓN</a></h5>
                     <div class="box-icon-modern-decor"></div>
                     <p class="box-icon-modern-text">Servicios de reparación, soporte remoto, reporte en sitio y mantenimiento preventivo.</p>
@@ -431,10 +492,10 @@
             <div class="container">
               <div class="row row-30 justify-content-end text-right">
                 <div class="col-sm-12">
-                  <h4 class="wow fadeInLeft">“En AMK, nos enfocamos principalmente en la venta al por mayor, ya que hemos observado que nuestra
-                                              demanda y capacidad de suministro es eficaz. Aunque también atendemos a clientes minoristas,
-                                              ofreciendo precios competitivos y un servicio personalizado para sus necesidades específicas"</h4>
-                  <p>¡Trabajamos cada día para ofrecerte los Mejores productos y servicios en el área de telecomunicaciones!</p>
+                  <h4 class="wow fadeInLeft text-center">“Nuestro objetivo principal es garantizar la satisfacción y el éxito de la comunicación 
+                                              de nuestros clientes a través de los radios de dos vías que ofrecemos, las instalaciones 
+                                              de sitios de comunicación y el mantenimiento de los mismos"</h4>
+                  <!-- <p>¡Trabajamos cada día para ofrecerte los Mejores productos y servicios en el área de telecomunicaciones!</p> -->
                   <!-- <div class="group-sm group-middle group justify-content-end"><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal">Get in Touch</a><a class="button button-white-outline button-ujarak" href="#">Learn More</a></div> -->
                 </div>
               </div>
@@ -1861,7 +1922,7 @@
               <!-- Team Classic-->
               <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1Vb1j_WNkyUoFs35BMMjxltCQulNqxjzo/view?usp=sharing"><img src="images/doc-1-420x424.jpg" alt="" width="420" height="424"/></a>
                 <div class="team-classic-caption">
-                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1Vb1j_WNkyUoFs35BMMjxltCQulNqxjzo/view?usp=sharing" target="_blank">MOTOTRBOTM CAPACITY MAX</a></h4>
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1Vb1j_WNkyUoFs35BMMjxltCQulNqxjzo/view?usp=sharing" target="_blank">MOTOTRBO & CAPACITY MAX</a></h4>
                   <!-- <p class="team-classic-status">Director of Production</p> -->
                 </div>
               </article>
@@ -1927,7 +1988,7 @@
                 </div>
               </article> -->
               <h3 class="box-contacts-link, thumbnail-classic-title">Philip Trudell</h3>
-              <p class="box-contacts-link, texto-justificado">"Nuestra participación en la integración de sistemas de comunicación exitosos hasta el momento y, en particular, el hecho de que seamos socios estratégicos de Motorola Solutions en 
+              <p class="box-contacts-link, texto-justificado">"Nuestra participación en la integración de sistemas de comunicación exitosos hasta el momento y en particular el hecho de que seamos socios estratégicos de Motorola Solutions en 
                 Centroamérica testifican que hemos cumplido con los estándares, normas y reglas éticas internacionales. Por lo tanto, las alianzas comerciales que tenemos nos exigen aceptar y cumplir los estándares más estrictos del mundo, 
                 llevándonos a ser el mejor aliado en los grandes proyectos de telecomunicaciones en todos los lugares donde se nos necesite".
               </p>

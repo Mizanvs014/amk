@@ -143,7 +143,8 @@ h1, [class*='heading-'] {
 	text-transform: uppercase;
 	letter-spacing: .024em;
 	word-spacing: .05em;
-	/* -webkit-text-stroke: 2px #ffffff; */
+	/* -webkit-text-stroke: 2px #2e5393; */
+	-webkit-text-stroke: 1px #004aad;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, [class*='heading-'] a {
@@ -13168,7 +13169,8 @@ html.tablet .ui-to-top {
 	top: 0;
 	right: 0;
 	z-index: 1030;
-	background: #ffffff;
+	background: #ffffff; 
+	/* color navbar */
 }
 
 .rd-navbar-static .rd-navbar--has-dropdown {
