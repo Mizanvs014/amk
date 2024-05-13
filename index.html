@@ -24,7 +24,7 @@
         display: inline-block;
         padding: 10px 20px; /* Ajusta el padding según sea necesario */
         background-color: #c2c2c2; /* Color de fondo de los botones sin seleccionar */
-        color: #2e5393; /* Color del texto de los botones sin seleccionar */
+        color: #fff; /* Color del texto de los botones sin seleccionar */
         border-radius: 5px; /* Bordes redondeados */
         text-decoration: none;
         transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave del color de fondo y del color del texto */
@@ -32,7 +32,7 @@
       }
     
       .isotope-filters-list li a:hover {
-        background-color: #2e5393; /* Cambia el color de fondo al pasar el cursor */
+        background-color: #123777; /* Cambia el color de fondo al pasar el cursor */
         color: #fff; /* Cambia el color del texto al pasar el cursor */
       }
     
@@ -40,21 +40,41 @@
         background-color: #2e5393; /* Color de fondo de los botones seleccionados */
         color: #fff; /* Color del texto de los botones seleccionados */
       }
+    
+      /* Establecer el color del texto en blanco para el menú y submenú */
+      .rd-navbar-nav a, .rd-navbar-dropdown a {
+        color: #fff;
+      }
     </style>
+
+<!-- <style>
+  /* Establecer el color del texto en blanco para el menú y submenú */
+  .rd-navbar-nav a, .rd-navbar-dropdown a {
+    color: #fff;
+  }
+
+  /* Establecer el color de fondo de la flecha en blanco */
+  .rd-navbar-toggle span {
+    background-color: #fff;
+  }
+</style> -->
+
+    
 
     <style>
       /* Color de fondo del navbar cuando se desplaza */
       .rd-navbar.rd-navbar-static.rd-navbar--is-stuck,
       .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-submenu,
       .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-dropdown {
-        background-color: #adbddd; /* Color gris claro */
+        /* background-color: #adbddd; Color gris claro */
+        background-color: #2e5393; /* Color gris claro */
       }
 
       /* Color de fondo del navbar al estar fijo */
       .rd-navbar.rd-navbar-static,
       .rd-navbar.rd-navbar-static .rd-navbar-submenu,
       .rd-navbar.rd-navbar-static .rd-navbar-dropdown {
-        background-color: #adbddd; /* Color gris claro */
+        background-color: #2e5393; /* Color gris claro */
       }
     </style>
 
@@ -306,8 +326,9 @@
                           <a class="rd-nav-link" href="#services">| Servicios ↓ |</a>
                           <ul class="rd-menu rd-navbar-dropdown">
                               <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Sitios de Repetición</a></li>
-                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de soluciones de energía</a></li>
-                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Mantenimiento y soporte de Sitios de Repetición</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Enlace Microondas</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Servicios de Vigilancia</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Soporte y Mantenimiento de Sitios de Repetición</a></li>
                           </ul>
                         </li>
                         <li class="rd-nav-item"><a class="rd-nav-link" href="#team">| Acerca De |</a></li>
@@ -514,34 +535,22 @@
             <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-3" data-custom-toggle-hide-on-blur="true" data-custom-toggle-disable-on-blur="true"><span class="icon fa fa-caret-down"></span>Filtrar</button>
             <ul class="isotope-filters-list" id="isotope-3">
               <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">Todos</a></li>
-              <li><a href="#" data-isotope-filter="Type 1" data-isotope-group="gallery">Radios de Dos Vías</a></li>
-              <li><a href="#" data-isotope-filter="Type 2" data-isotope-group="gallery">Cámaras de Vigilancia</a></li>
-              <li><a href="#" data-isotope-filter="Type 3" data-isotope-group="gallery">Microonda</a></li>
-              <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">Energía</a></li>
+              <li><a href="#" data-isotope-filter="Type 1" data-isotope-group="gallery">RADIOS DE DOS VÍAS</a></li>
+              <li><a href="#" data-isotope-filter="Type 2" data-isotope-group="gallery">ENLACES MICROONDAS</a></li>
+              <li><a href="#" data-isotope-filter="Type 3" data-isotope-group="gallery">SISTEMA DE VIGILANCIA</a></li>
+              <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">INSTRUMENTOS PARA MEDICIÓN DE METEREOLOGÍA E HIDROLOGÍA</a></li>
+              <!-- <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">Energía</a></li> -->
             </ul>
           </div>
+          
           <div class="row row-30 isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group">
+           
             <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-01.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/tkl100.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-01.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-01.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">REPETIDOR MOTOTRBO™ <br>SERIE SLR 8000</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Ofrece servicio de radio de dos vías de alto desempeño y alta confiabilidad, optimizado para su lugar de trabajo. Con su diseño compacto y alta confiabilidad.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/MOTL_SLR8000_DS_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/WAVE TLK100.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/WAVE-TLK100.jpg" data-lightgallery="item"><img src="images/principal-productos/WAVE-TLK100.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/tkl100.jpg" data-lightgallery="item"><img src="images/principal-productos/tkl100.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">TLK100<br>SISTEMA WAVE</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Diseñado para industrias tales como seguridad privada,transporte, construcción,  energía, y más. El radio de dos vías WAVE PTX nos mantiene conectados y enfocados con audio alto y claro, seguimiento de ubicación y Wi-Fi</p><br>
@@ -550,199 +559,26 @@
               </article>
             </div>
 
-            
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-ion.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/wtm400platform.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-ion.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-ion.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">MOTOTRBO™ ION</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Capacidades multimedia completas en una plataforma Android con un ecosistema de aplicaciones de código abierto.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/ion_lacr/es/LACR_ESP_MOTOTRBO_Ion_Datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-07.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-07.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-07.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">DEP™ 450</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Simple y asequible, el radio digital portátil de dos vías DEP 450 es un radio para los usuarios que lo utilizan todos los días y desean permanecer conectados.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/mot_mtrbo_dep450_product_specsheet_es_digital.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-09.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-09.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-09.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">EP™ 350</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Amplio conjunto de funciones y forma ergonómica para comodidad de uso en un diseño durable, compacto y liviano, puede mejorar la capacidad de comunicación al mismo tiempo que aumenta la eficiencia y productividad.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/es-xl/mot_ep350mx_brochure_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-r7.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-r7.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-r7.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R7</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/DataSheet_MototrboR7_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-r2.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-r2.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-r2.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R2</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/mototrbo_r2_datasheet_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-                <article class="thumbnail thumbnail-classic thumbnail-md">
-                  <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-02.jpg" alt="" width="420" height="350"/>
-                  </div>
-                  <div class="thumbnail-classic-caption">
-                    <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-02.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-02.jpg" alt="" width="420" height="350"/></a>
-                      <h5 class="thumbnail-classic-title">APX™ 3000</h5>
-                    </div>
-                    <p class="thumbnail-classic-text texto-justificado">Ya sea que sea un oficial encubierto o esté en operaciones especiales, necesita comunicarse de manera segura mientras se mezcla con el entorno.</p><br>
-                    <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/apx/APX_3000_NA_Datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-                <article class="thumbnail thumbnail-classic thumbnail-md">
-                  <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-03.jpg" alt="" width="420" height="350"/>
-                  </div>
-                  <div class="thumbnail-classic-caption">
-                    <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-03.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-03.jpg" alt="" width="420" height="350"/></a>
-                      <h5 class="thumbnail-classic-title">APX™ 5000</h5>
-                    </div>
-                    <p class="thumbnail-classic-text texto-justificado">El APX 5000 P25 de banda única ha proporcionado la resistencia y confiabilidad legendarias de APX sin comprometer el tamaño o las funciones para actividades de rutina o emergencias extremas.</p><br>
-                    <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_apx5000_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-                <article class="thumbnail thumbnail-classic thumbnail-md">
-                  <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-08.jpg" alt="" width="420" height="350"/>
-                  </div>
-                  <div class="thumbnail-classic-caption">
-                    <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-08.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-08.jpg" alt="" width="420" height="350"/></a>
-                      <h5 class="thumbnail-classic-title">DGP™ 8550e</h5>
-                    </div>
-                    <p class="thumbnail-classic-text texto-justificado">Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente, estos radios de próxima generación ofrecen niveles máximos de conectividad para su organización.</p><br>
-                    <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/motl_dgp8000e_5000e_belize_datasheet_es_0920.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-                <article class="thumbnail thumbnail-classic thumbnail-md">
-                  <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-05.jpg" alt="" width="420" height="350"/>
-                  </div>
-                  <div class="thumbnail-classic-caption">
-                    <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-05.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-05.jpg" alt="" width="420" height="350"/></a>
-                      <h5 class="thumbnail-classic-title">VX-80-G6-4</h5>
-                    </div>
-                    <p class="thumbnail-classic-text texto-justificado">Pensada tanto para usuarios novatos como de nivel intermedio. Se trata de un radio portátil con todas las características necesarias para garantizar una comunicación confiable a un precio asequible.</p><br>
-                    <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/VX80_Datasheet_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                  </div>
-                </article>
-              </div>
-
-              <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-                <article class="thumbnail thumbnail-classic thumbnail-md">
-                  <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-dem.jpg" alt="" width="420" height="350"/>
-                  </div>
-                  <div class="thumbnail-classic-caption">
-                    <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-dem.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-dem.jpg" alt="" width="420" height="350"/></a>
-                      <h5 class="thumbnail-classic-title">DEM™ 400</h5>
-                    </div>
-                    <p class="thumbnail-classic-text texto-justificado">Disponibles como radios móviles analógicos/digitales, con todos los beneficios de la tecnología más moderna</p><br>
-                    <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/business/products/two-way_radios/mobile_radios/wide_area_large_business_mobile_radios/cm200d/_documents/_staticfiles/mot_mototrbo_dem300_dem400_specsheet_es_080513.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                  </div>
-                </article>
-              </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-evolve.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-evolve.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-evolve.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">NITRO™ Evolve LTE</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Una computadora de mano LTE robusta diseñada para la empresa.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/two-way-radios/mototrbo/nitro/evolve/evolve_datasheet_eng.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-1.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-1.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-1.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Rover 6S</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Frecuencias ampliadas, los recursos de procesamiento adicionales para el crecimiento de la capacidad, la modernización de Crypto Core y otras características mejoradas.</p><br>
-                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-bcs-rover-6s-transceiver-sell-sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-011.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-011.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-011.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/wtm400platform.jpg" data-lightgallery="item"><img src="images/principal-productos/wtm400platform.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">WTM 4000 Platform</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">La capacidad ultra alta de la plataforma protege su red del crecimiento del tráfico que se avecina y permitirá la implementación rápida de nuevos servicios.</p><br>
                   <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1TqdE5ht2XNqgq-QVH3c6k3rVx1NmrylR/view?usp=sharing" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-012.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h6minidomecamara.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-012.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-012.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h6minidomecamara.jpg" data-lightgallery="item"><img src="images/principal-productos/h6minidomecamara.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H6 Mini Dome Camara</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">El sistema de enlace de datos aerotransportado sincroniza el intercambio de ISR de gran aancho de banda entre plataformas tripuladas.</p><br>
@@ -750,82 +586,40 @@
                 </div>
               </article>
             </div>
-<!-- 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-013.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/niveldelagua.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-013.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-013.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Radar de Banda S</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/niveldelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/niveldelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Nivel del Agua</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor de magnetrón o klystron de hasta 1 megavatio, los radares de banda S de Baron ofrecen una excelente detección del clima en todos los entornos.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c01.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c01.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c01.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Sobretensión</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>Aplicación de electrodomésticos.</li><li>Salidas múltiples.</li><li>Supresor de sobretensiones con USB.</li></p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h01.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h01.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h01.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Agricultura y Riego</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Los sensores OTT Hydromet facilitan información clave para identificar tendencias y para el cumplimiento de la normativa sobre parámetros de cantidad y calidad del agua en actividades de riego y agrícolas.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 8" data-wow-delay=".8s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-006.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-006.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-006.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Accesorios RF</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Disponemos de un catálogo de accesorios RF para Instalación y Equipo. Realizamos envíos locales e internacionales.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://amkstockhn.nicepage.io/AMK-TRADING---IN-STOCK.html" target="_blank"><u>Visitar Sitio</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-2.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-2.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-2.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">RF-7850D</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Manpack compacto de tres canales que ofrece MANET resistente y de alta velocidad por tierra, mar y aire, lo que respalda una imagen operativa común compartida en tiempo real.</p><br>
-                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2021-02/cs-tcom-rf-7850d-multi-channel-modular-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Los sensores de nivel de agua y los sensores de flujo continuo OTT se acompañan de sistemas de telemetría y de OTT Hydrosystems para medir, recoger y transmitir datos sobre la velocidad y el nivel del agua en tiempo real.</p><br>
                 </div>
               </article>
             </div>
 
-            
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a01.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/tlk150.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a01.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a01.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/tlk150.jpg" data-lightgallery="item"><img src="images/principal-productos/tlk150.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">TLK150</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Opere de manera segura mientras conduce, gracias a la practicidad de PTT. Administre grupos de conversación y suscripciones en tiempo real.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/TLK150_Solution_Brief_ES_0820.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/iru600.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/iru600.jpg" data-lightgallery="item"><img src="images/principal-productos/iru600.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">IRU 600</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">ofrece una opción de potencia extra alta que ofrece una potencia de salida de hasta +39dBm, lo que da como resultado enlaces más largos con antenas más pequeñas y menores costos relacionados con la torre.</p><br>
@@ -834,12 +628,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v1.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5acamaraline.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v1.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v1.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5acamaraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5acamaraline.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5A Camera Line</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Para eventos potencialmente críticos, brindando una solución de seguridad de video más inteligente y poderosa.</p><br>
@@ -848,66 +642,39 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b01.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/calidaddelagua.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b01.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b01.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Radar de Banda C</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/calidaddelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/calidaddelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Calidad del Agua</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor klystron de 1 megavatio o un transmisor magnetrón de 350 kilovatios, los radares de banda C de Baron ofrecen un rendimiento superior en cualquier condición climática.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">La medición de la cantidad y la calidad de aguas superficiales (canales descubiertos, ríos, embalses, lagos y estuarios) es uno de los pilares fundamentales del monitoring hidrológico</p><br>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c02.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/r7.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c02.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c02.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">AVR</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/r7.jpg" data-lightgallery="item"><img src="images/principal-productos/r7.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R7</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>R2C-SERIES.</li><li>RU SERIES.</li><li>INDUSTRIAL.</li><li>R-AVR33-10.</li></p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/DataSheet_MototrboR7_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h02.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/odu600.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h02.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h02.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Aguas Costeras y Estuarios</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Hydrolab y Sea-bBird Scientific ofrecen diversos instrumentos multiparámetro para la calidad del agua y sensores de nutrientes para aplicaciones de larga duración en aguas costeras.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-3.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-3.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-3.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">XL EXTREME™ 400P</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Diseñado por bomberos para soportar las condiciones más extremas, puede resistir el calor y mantenerlo conectado. Cuenta con sellos resistentes al calor, pantlla térmica y materiales para bocinas.</p><br>
-                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-08/cs-pspc-xl-extreme-400p-portable-radio-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a02.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a02.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a02.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/odu600.jpg" data-lightgallery="item"><img src="images/principal-productos/odu600.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">ODU 600</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Se conectan con un cable coaxial simple a una IDU. Ofrecen un rendimiento de sistema de radio líder en el mercado para minimizar la carga y los costos de la torre.</p><br>
@@ -916,12 +683,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v2.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camaraojodepezh5a.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v2.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v2.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/camaraojodepezh5a.jpg" data-lightgallery="item"><img src="images/principal-productos/camaraojodepezh5a.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">Cámara ojo de pez H5A</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Es una solución rentable y fácil de instalar que proporciona vistas panorámicas de 360°</p><br>
@@ -930,81 +697,39 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b02.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/caudaldelagua.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b02.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b02.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Software de <br>Visualización <br>Meteorológica</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/caudaldelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/caudaldelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Caudal del Agua</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Baron ofrece múltiples opciones de software de visualización meteorológica para ver y analizar datos meteorológicos, lo que facilita la generación de pronósticos y la evaluación de las condiciones en tiempo real.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c03.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c03.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c03.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Línea Interactiva</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>LINE INTERACTIVE.</li><li>DC UPS.</li><li>LITHIUM.</li><li>ES INDUSTRIAL.</li></p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h03.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h03.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h03.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Hidrología urbana y gestión de aguas pluviales</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Los sistemas y sensores de OTT Hydromet facilitan información para gestionar las tareas relacionadas con el agua en zonas urbanas, entre otros.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/speaker/IP%20Horn%20Speaker%20Datasheet-2022.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-4.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-4.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-4.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">BNVD-1531</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Gafas giratorias de visión nocturna con dioptrías ajustables, sistema de ganancia manual e iluminador IR. El 1531 tiene una reducción de peso significativa con respecto a sus predecesores.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2021-01/cs-ivs-binocular-night-vision-device-1531-sell-sheet_0.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-04.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-04.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-04.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">APX™ 900</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">El APX 900 está diseñado para obras públicas, servicios gubernamentales y organizaciones educativas que necesitan comunicación esencial a un precio asequible. Incluye la conectividad inalámbrica Bluetooth®. </p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/two-way-radios/apx/apx-900/apx_900_spec_sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Determinar con sistemas de medición de flujo y caudal la cantidad de agua que fluye por un canal abierto es crucial para predecir la disponibilidad del agua, el riesgo de avenidas y la distribución del riego, entre otros.</p><br>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a03.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/r2.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a03.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a03.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/r2.jpg" data-lightgallery="item"><img src="images/principal-productos/r2.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R2</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/mototrbo_r2_datasheet_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/str4500.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/str4500.jpg" data-lightgallery="item"><img src="images/principal-productos/str4500.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">STR 4500</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Ofrece lo último en innovaciones de enlace troncal para admitir una capacidad de hasta 10 Gbps en distancias de enlace superiores a 100 km, incluso sobre el agua.</p><br>
@@ -1013,12 +738,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v3.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camarah5aptz.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v3.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v3.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/camarah5aptz.jpg" data-lightgallery="item"><img src="images/principal-productos/camarah5aptz.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">Cámara H5A-PTZ</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Brinda cobertura de área amplia y detalles de largo alcance con zoom de hasta 36x para una conciencia situacional superior.</p><br>
@@ -1027,67 +752,39 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b03.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/sensoresmetereologicos.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b03.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b03.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Sistemas de Modelado <br>Meteorológico</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/sensoresmetereologicos.jpg" data-lightgallery="item"><img src="images/principal-productos/sensoresmetereologicos.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Sensores Meteorológicos</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Como líder en modelado meteorológico de alta resolución, Baron ofrece modelado que mejora su conocimiento de pronóstico y brinda mayor detalle que la salida del modelo global.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">OTT Hydromet ofrece una amplia variedad de sistemas de medición de precipitaciones, incluyendo disdrómetros láser de alta precisión y pluviómetros con distintas opciones de alimentación y telemetría para intervenciones en lugares remotos.</p><br>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c04.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx3000.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c04.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c04.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">SAI en línea</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx3000.jpg" data-lightgallery="item"><img src="images/principal-productos/apx3000.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 3000</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>UPO11 SERIES.</li><li>UPO22 SERIES UL CERTIFICATION.</li><li>UPO33 SERIES.</li></p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Ya sea que sea un oficial encubierto o esté en operaciones especiales, necesita comunicarse de manera segura mientras se mezcla con el entorno.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/apx/APX_3000_NA_Datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h04.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/ctr8540.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h04.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h04.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Flujo y caudal</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Determinar con sistemas de medición de flujo y caudal la cantidad de agua que fluye por un canal abierto es crucial para predecir la disponibilidad del agua, el riesgo de avenidas y la distribución del riego, entre otros.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-5.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-5.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-5.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">RF-7800H-MP</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">El Falcon III RF 7800H-MP emerge como el líder del mercado para manpacks HF de banda ancha Tipo 3, con capacidades ampliadas para entornos de largo alcance más allá de la línea de visión.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-tcom-rf-7800h-mp-wideband-hf-vhf-tactical-radio-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-           
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a04.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a04.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a04.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/ctr8540.jpg" data-lightgallery="item"><img src="images/principal-productos/ctr8540.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">CTR 8540</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">El enrutador combina radio (L1), Carrier Ethernet (L2) y es completamente actualizable por software a L3 IP/MPLS, todo en un solo dispositivo, lo que reduce drásticamente el TCO.</p><br>
@@ -1096,12 +793,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v4.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camarah5airptz.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v4.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v4.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/pcamarah5airptz.jpg" data-lightgallery="item"><img src="images/principal-productos/camarah5airptz.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">Cámara H5A IR PTZ</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Permite a los equipos de seguridad ver más en la oscuridad con un rango de iluminación IR automatizado de hasta 300 metros.</p><br>
@@ -1110,80 +807,40 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b04.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/armarios.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b04.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b04.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Inundaciones <br>Repentinas</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/armarios.jpg" data-lightgallery="item"><img src="images/principal-productos/armarios.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Armarios para Transmision y Almacenamiento de Datos en Campo</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Obtenga un aviso anticipado de inundaciones repentinas a nivel hiperlocal de nuestro exclusivo algoritmo de riesgo de inundaciones repentinas.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c05.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c05.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c05.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">PDUs</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>ONLINE UPO11 SERIES.</li><li>TOWER DESIGN.</li><li>RACK TOWER DESIGN.</li></p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h05.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h05.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h05.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Alerta de avenidas</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Los sensores de nivel de agua y los sensores de flujo continuo OTT se acompañan de sistemas de telemetría y de OTT Hydrosystems para medir, recoger y transmitir datos sobre la velocidad y el nivel del agua en tiempo real.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-6.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-6.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-6.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">HAWKLINK</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Los datos de radar, video, red y acústicos pueden conectarse a la perfección entre los activos aéreos y marítimos, lo que refuerza el comando y el control y extiende la conciencia más allá del horizonte.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-bcs-cdl-hawklink-an-arq-59-radio-terminal-set-sell-sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-06.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-06.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-06.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">DEP™ 250</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Ofrece los beneficios de la tecnología digital: en modo digital, 40% más de tiempo de conversación, capacidad de doble voz de 12.5kHz de ancho de banda y mejor rendimiento de audio que los equipos analógicos.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/two-way-radios/mototrbo/portable-radios/dep/dep250_esp_0819_specsheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Sólidos armarios de distribución con cerradura de OTT MetSystems para las estaciones meteorológicas automáticas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/video-archive/avigilon-video-archive-datasheet-en-v3-es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a05.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx5000.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a05.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a05.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx5000.jpg" data-lightgallery="item"><img src="images/principal-productos/apx5000.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 5000</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El APX 5000 P25 de banda única ha proporcionado la resistencia y confiabilidad legendarias de APX sin comprometer el tamaño o las funciones para actividades de rutina o emergencias extremas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_apx5000_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/ctr8300yeclipse.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/ctr8300yeclipse.jpg" data-lightgallery="item"><img src="images/principal-productos/ctr8300yeclipse.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">CTR 8300 y Eclipse</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Son ideales para el tráfico y el acceso de mantenimiento. Las IDU de microondas suelen admitir una combinación de interfaces TDM y Ethernet heredadas.</p><br>
@@ -1192,12 +849,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v5.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5aruggedptz.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v5.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v5.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5aruggedptz.jpg" data-lightgallery="item"><img src="images/principal-productos/h5aruggedptz.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5A Rugged PTZ</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Funciona de manera continua y confiable en los entornos más hostiles y está diseñada para durar en aplicaciones de misión crítica.</p><br>
@@ -1206,67 +863,39 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b05.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/radardebandas.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b05.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b05.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Clima Tropical</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/radardebandas.jpg" data-lightgallery="item"><img src="images/principal-productos/radardebandas.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Radar de Banda S</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Sepa qué tan favorable será el entorno para el futuro desarrollo tropical con los pronósticos tropicales de Baron y el índice exclusivo de huracanes.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor de magnetrón o klystron de hasta 1 megavatio, los radares de banda S de Baron ofrecen una excelente detección del clima en todos los entornos.</p><br>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c06.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx900.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c06.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c06.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Batería</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx900.jpg" data-lightgallery="item"><img src="images/principal-productos/apx900.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 900</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>SERIE GLB.</li><li>SERIE LSB.</li><li>SERIE LSC.</li><li>LITIO.</li></p><br>
+                  <p class="thumbnail-classic-text texto-justificado">El APX 900 está diseñado para obras públicas, servicios gubernamentales y organizaciones educativas que necesitan comunicación esencial a un precio asequible. Incluye la conectividad inalámbrica Bluetooth®. </p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/two-way-radios/apx/apx-900/apx_900_spec_sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h06.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/lteprivada.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h06.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h06.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Agua subterránea</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">La recepción de datos sobre el agua subterránea mediante transmisión remota desde una de las muchas soluciones de telemetría de OTT disponibles permite ahorrar tiempo y recursos en los trabajos de campo.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-7.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-7.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-7.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">RF-9820S</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Esta solución versátil y de bajo SWAP ofrece a los combatientes la flexibilidad de la próxima generación de MANET y la conectividad de línea de visión heredada.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-03/cs-tcom-an-prc-171-compact-team-radio-datasheet-a.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a06.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a06.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a06.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/lteprivada.jpg" data-lightgallery="item"><img src="images/principal-productos/lteprivada.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">LTE Privada</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">La plataforma de grado industrial de Aviat Network, cuando se combina con el transporte inalámbrico de Aviat, es la solución LTE más asequible y confiable para pequeñas implementaciones industriales y rurales.</p><br>
@@ -1275,12 +904,12 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v6.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5acornercamara.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v6.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v6.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5acornercamara.jpg" data-lightgallery="item"><img src="images/principal-productos/h5acornercamara.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5A Corner Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Sin agarre y con clasificación de impacto IK10+ que puede soportar los intentos más duros de destruirla, separarla, acoplarla o desactivarla.</p><br>
@@ -1289,68 +918,53 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c07.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/radardebandac.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c07.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c07.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Inversores</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/radardebandac.jpg" data-lightgallery="item"><img src="images/principal-productos/radardebandac.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Radar de Banda C</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>DC TO AC.</li><li>ES (UPS) DC TO AC.</li><li>ES + AVR(UPS) DC TO AC.</li><li>ES + (UPS) DC TO AC.</li><li>Double power supply solar inverter.</li><li>Solar GRID-TIE.</li></p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor klystron de 1 megavatio o un transmisor magnetrón de 350 kilovatios, los radares de banda C de Baron ofrecen un rendimiento superior en cualquier condición climática.</p><br>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h07.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/vx80g64.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h07.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h07.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Meteorología</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/vx80g64.jpg" data-lightgallery="item"><img src="images/principal-productos/vx80g64.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">VX-80-G6-4</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">OTT Hydromet ofrece una amplia variedad de sistemas de medición de precipitaciones, incluyendo disdrómetros láser de alta precisión y pluviómetros con distintas opciones de alimentación y telemetría para intervenciones en lugares remotos.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Pensada tanto para usuarios novatos como de nivel intermedio. Se trata de un radio portátil con todas las características necesarias para garantizar una comunicación confiable a un precio asequible.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/VX80_Datasheet_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-8.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/plataformasdegestion.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-8.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-8.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">RF-7850M-HH</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Ofrece la potencia y el rendimiento de un manpack en un dispositivo portátil resistente compatible con SWAP. Equipado con capacidades de banda ancha, banda estrecha y arquitectura para el futuro.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-11/cs-tcom-rf-7850m-hh-multiband-networking-handheld-radio-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-a07.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-a07.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-a07.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Plataforma de Gestión</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/plataformasdegestion.jpg" data-lightgallery="item"><img src="images/principal-productos/plataformasdegestion.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Plataformas de Gestión</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Brinda una administración de red integral, eficiente y transparente para redes de microondas TDM, Carrier Ethernet, híbridas e IP/MPLS.</p><br>
                   <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1y7ctEFXOw32fQEoFRFXGpNdLegqosJVW/view?usp=share_link" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v7.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5adualheadcamera.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v7.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v7.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5adualheadcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h5adualheadcamera.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5A Dual Head Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Es una cámara de doble sensor rentable y de bajo perfil que proporciona una mayor cobertura de área e iluminación IR.</p><br>
@@ -1359,67 +973,26 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 5" data-wow-delay=".5s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-b06.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dep450.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-b06.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-b06.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Severidad de la Sequía</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dep450.jpg" data-lightgallery="item"><img src="images/principal-productos/dep450.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DEP™ 450</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Visualice los déficits de precipitación y compárelos con los patrones de precipitación normales para obtener una imagen completa de dónde es probable que se desarrolle o ya esté ocurriendo una sequía.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Simple y asequible, el radio digital portátil de dos vías DEP 450 es un radio para los usuarios que lo utilizan todos los días y desean permanecer conectados.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/mot_mtrbo_dep450_product_specsheet_es_digital.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c08.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5amodularcamera.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c08.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c08.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Cargador Solar</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">MPPT Charger:<br><br><li>SC40-1224</li><li>SC60-1248</li><li>SC60-192</li><li>SC60-240</li></p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h08.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h08.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h08.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Petróleo y gas</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Los sensores de nivel OTT de agua subterránea miden los niveles de agua corriente en actividades de extracción de petróleo y gas se utilizan en el monitoring de remediación. Generalmente se utiliza la conductividad como medida sustituta.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-9.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-9.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-9.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">RF-7850W</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Las tecnologías de roaming y retransmisión de saltos múltiples en esta radio de línea de vista de alta capacidad (HCLOS) admiten el intercambio de video y datos ISR de alta definición casi en tiempo real.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-08/cs-tcom-rf-7850w-hclos-radio-broadband-frequency-hopping-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div> -->
-
-            
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v8.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v8.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v8.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5amodularcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h5amodularcamera.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5A Modular Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Cámara más pequeña hasta el momento. Esta cámara flexible está diseñada específicamente para áreas con espacio limitado.</p><br>
@@ -1428,41 +1001,26 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <!-- Thumbnail Classic-->
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-10.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-10.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-10.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">SPEAR</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Nuestro telémetro láser de puntería de precisión más pequeño con láseres de puntería IR y visible, calculadora balística integrada, brújula digital e interfaz GPS externa.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2021-08/cs-ivs-small-precision-enhanced-aiming-rangefinder-spear-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
             <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-010.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dgp8550e.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-010.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-010.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">DGM™ 8500E</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dgp8550e.jpg" data-lightgallery="item"><img src="images/principal-productos/dgp8550e.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DGP™ 8550e</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">La Serie DGM™8000e ha sido diseñada para el profesional calificado que se niega a hacer concesiones. Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_mototrbo_dgm8000e5000e_bali_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente, estos radios de próxima generación ofrecen niveles máximos de conectividad para su organización.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/motl_dgp8000e_5000e_belize_datasheet_es_0920.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v9.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5slcameraline.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v9.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v9.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5slcameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5slcameraline.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5SL Camera Line</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Es una solución de seguridad versátil y rentable respaldada por una garantía líder en la industria.</p><br>
@@ -1470,53 +1028,13 @@
                 </div>
               </article>
             </div>
-<!-- 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c09.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c09.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c09.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Batería</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>GEL LEAD</li><li>LEAD CARBON</li><li>LITHIUM</li></p><br>
-                </div>
-              </article>
-            </div> -->
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h09.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5mcameraline.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h09.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h09.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Aguas superficiales</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">La medición de la cantidad y la calidad de aguas superficiales (canales descubiertos, ríos, embalses, lagos y estuarios) es uno de los pilares fundamentales del monitoring hidrológico</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-11.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-11.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-11.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Integrated Tactical Area Communications Systems</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Estas puertas de enlace de red C4ISR se implementan rápidamente en lugares desprovistos de cualquier infraestructura LAN/WAN.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/newsroom/editorial/2021/10/l3harris-mobile-isr-solutions-enable-all-domain-network-convergence" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v10.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v10.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v10.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5mcameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5mcameraline.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5M Camera Line</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Para proyectos de videovigilancia con presupuesto limitado y es beneficiosa para sitios que requieren una cámara de lente fija para uso en exteriores.</p><br>
@@ -1525,38 +1043,26 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c010.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850w.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c010.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c010.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Hardware Solar</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850w.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850w.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850W</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>SOLAR PANELS</li><li>MOUNTING</li><li>WIRE AND CONNECTORS</li><li>DC BOX AND FUCES</li></p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Las tecnologías de roaming y retransmisión de saltos múltiples en esta radio de línea de vista de alta capacidad (HCLOS) admiten el intercambio de video y datos ISR de alta definición casi en tiempo real.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-08/cs-tcom-rf-7850w-hclos-radio-broadband-frequency-hopping-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h010.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5procameraline.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h010.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h010.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Energía hidráulica</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">El monitoring del impacto de las hidroeléctricas en las masas de agua puede ser importante para el cumplimiento de la normativa y para modelaciones.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v11.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v11.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v11.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5procameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5procameraline.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H5 Pro Camera Line</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Ofrece detalles de imagen sorprendentes, proporcionando simultáneamente la máxima cobertura de escena, al tiempo que minimiza el ancho de banda.</p><br>
@@ -1565,38 +1071,26 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 6" data-wow-delay=".6s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-c011.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7800hmp.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-c011.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-c011.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Herramientas Solares</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7800hmp.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7800hmp.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7800H-MP</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado"><li>Registrador de energía</li><br>El sistema de monitoreo mide la energía que se consume y la energía que se genera, por medio de sensores de corriente, también utiliza una conexión a internet (WIFI) para enviar datos a nuestro servidor en la nube</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">El Falcon III RF 7800H-MP emerge como el líder del mercado para manpacks HF de banda ancha Tipo 3, con capacidades ampliadas para entornos de largo alcance más allá de la línea de visión.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-tcom-rf-7800h-mp-wideband-hf-vhf-tactical-radio-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h011.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4multisensorcamera.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h011.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h011.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Monitoring de nutrientes</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Sea-Bird Scientific ofrece varias soluciones para la medición no presencial durante largos periodos de nitratos y fosfatos en tiempo real.</p><br>
-                </div>
-              </article>
-            </div> -->
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v12.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v12.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v12.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4multisensorcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4multisensorcamera.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H4 Multisensor Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Combina análisis de video de autoaprendizaje de Avigilon con una cobertura excepcional, con tres o cuatro sensores de cámara ajustables individualmente.</p><br>
@@ -1605,25 +1099,26 @@
               </article>
             </div>
 
-            <!-- <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 7" data-wow-delay=".7s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-h012.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rover6s.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-h012.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-h012.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Minería</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rover6s.jpg" data-lightgallery="item"><img src="images/principal-productos/rover6s.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Rover 6S</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Las sondas multiparámetro Hydrolab pueden medir una gran cantidad de parámetros asociados a la minería, entre ellos la conductividad y la conductancia específica, el total de sólidos disueltos, la salinidad, el pH y el ORP (redox), el cloruro, el oxígeno disuelto y la turbidez.</p><br>
+                  <p class="thumbnail-classic-text texto-justificado">Frecuencias ampliadas, los recursos de procesamiento adicionales para el crecimiento de la capacidad, la modernización de Crypto Core y otras características mejoradas.</p><br>
+                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-bcs-rover-6s-transceiver-sell-sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
-            </div> -->
+            </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v13.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4thermalcamera.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v13.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v13.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4thermalcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4thermalcamera.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H4 Thermal Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Está diseñada para detectar la presencia y el movimiento de personas y vehículos en áreas con poca visibilidad.</p><br>
@@ -1632,12 +1127,26 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v14.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850d.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v14.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v14.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850d.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850d.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850D</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Manpack compacto de tres canales que ofrece MANET resistente y de alta velocidad por tierra, mar y aire, lo que respalda una imagen operativa común compartida en tiempo real.</p><br>
+                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2021-02/cs-tcom-rf-7850d-multi-channel-modular-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4thermalelevatedtemperature.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4thermalelevatedtemperature.jpg" data-lightgallery="item"><img src="images/principal-productos/h4thermalelevatedtemperature.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H4 Thermal Elevated Temperature Detection</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Para detectar rostros, medir la temperatura de la región interna del canto y notificar a los operadores.</p><br>
@@ -1646,26 +1155,26 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v15.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850mhh.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v15.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v15.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">H4 Video Intercom</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850mhh.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850mhh.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850M-HH</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Cámara de ojo de pez de 3 MP con un intercomunicador de alto rendimiento, con tecnologías de cancelación de eco y reducción de ruido.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h4-video-intercom/avigilon-h4-video-intercom-datasheet-es-rev7.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Ofrece la potencia y el rendimiento de un manpack en un dispositivo portátil resistente compatible con SWAP. Equipado con capacidades de banda ancha, banda estrecha y arquitectura para el futuro.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-11/cs-tcom-rf-7850m-hh-multiband-networking-handheld-radio-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v16.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4lpccamera.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v16.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v16.jpg" alt="" width="420" height="350"/></a>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4lpccamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4lpccamera.jpg" alt="" width="420" height="350"/></a>
                     <h5 class="thumbnail-classic-title">H4 LPC Camera</h5>
                   </div>
                   <p class="thumbnail-classic-text texto-justificado">Está diseñada para capturar matrículas de vehículos, incluso en condiciones de iluminación difíciles.</p><br>
@@ -1674,174 +1183,61 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v17.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dgm8500e.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v17.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v17.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Halo Smart Sensor</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dgm8500e.jpg" data-lightgallery="item"><img src="images/principal-productos/dgm8500e.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DGM™ 8500E</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Es un detector de vapeo en tiempo real y un dispositivo de seguridad que ayuda a detectar eventos potencialmente críticos.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/integrations/halo-iot-sensor-datasheet-es-rev2.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">La Serie DGM™8000e ha sido diseñada para el profesional calificado que se niega a hacer concesiones. Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_mototrbo_dgm8000e5000e_bali_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v18.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dem400.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v18.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v18.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">AI NVR</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dem400.jpg" data-lightgallery="item"><img src="images/principal-productos/dem400.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DEM™ 400</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Es una solución administrada, preparada para la nube y reforzada para empresas que alivia los costos de mantenimiento.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/ai-nvr/avigilon-ai-nvr-datasheet-es-rev6.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles como radios móviles analógicos/digitales, con todos los beneficios de la tecnología más moderna</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/business/products/two-way_radios/mobile_radios/wide_area_large_business_mobile_radios/cm200d/_documents/_staticfiles/mot_mototrbo_dem300_dem400_specsheet_es_080513.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v19.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/xlextreme400p.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v19.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v19.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Network Video Recorders</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/xlextreme400p.jpg" data-lightgallery="item"><img src="images/principal-productos/xlextreme400p.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">XL EXTREME 400P</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Ofrece una grabación, un rendimiento, una disponibilidad de datos y una protección incomparables y de alto rendimiento.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/nvr/avigilon-nvr5-datasheet-es-rev2.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Conozca la única radio portátil diseñada de principio a fin con la información del bombero para ser un bombero rudo.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2023-11/l3harris-xl-extreme-400p-portable-radio-datasheet-cs.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
               <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v20.jpg" alt="" width="420" height="350"/>
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf9820s.jpg" alt="" width="420" height="350"/>
                 </div>
                 <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v20.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v20.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Network Video Recorders - FIPS Series</h5>
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf9820s.jpg" data-lightgallery="item"><img src="images/principal-productos/rf9820s.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-9820S</h5>
                   </div>
-                  <p class="thumbnail-classic-text texto-justificado">Ofrece grabación, rendimiento, disponibilidad de datos y protección seguros y de alto rendimiento para su sistema de seguridad.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/nvr/avigilon-nvr4x-fips-series-datasheet-en-rev2.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                  <p class="thumbnail-classic-text texto-justificado">Esta solución versátil y de bajo SWAP ofrece a los combatientes la flexibilidad de la próxima generación de MANET y la conectividad de línea de visión heredada.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-03/cs-tcom-an-prc-171-compact-team-radio-datasheet-a.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
                 </div>
               </article>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v21.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v21.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v21.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">HD Video Aplliances</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Diseñados para ayudar a acortar el tiempo de instalación, simplificar la implementación y reducir el costo y la complejidad de su sistema de seguridad.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/hd-video-appliances/avigilon-hdva3-8p-16p-24p-datasheet-es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v22.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v22.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v22.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">ES Appliances</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Dispositivo más pequeño de Avigilon que desbloquea las capacidades de análisis de video de próxima generación para cualquier flujo de video conectado. </p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/acc-es/avigilon-acc-es-8port-appliance-datasheet-en-rev10_es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v23.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v23.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v23.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">ACC ES Rugged Appliance</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Diseñado específicamente para enfrentar los desafíos que comúnmente se enfrentan en la seguridad de la ciudad y la infraestructura.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/acc-es-rugged/avigilon-acc-es-8-port-rugged-appliance8-port-datasheet-en-rev9_es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v24.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v24.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v24.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">AI Appliance 2</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Mejora la seguridad de su sitio al incorporar Avigilon Next-Generation Video Analytics en cámaras no analíticas.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/ai-appliance2/avigilon-ai-appliance-datasheet-es-rev4.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v25.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v25.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v25.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Video Archive</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Solución de expansión de almacenamiento de video de alta capacidad para retener petabytes (PB) de video de manera rentable.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/video-archive/avigilon-video-archive-datasheet-en-v3-es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v26.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v26.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v26.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Avigilion Workstations</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Una manera fácil de implementar estaciones de monitoreo de alta resolución adicionales a los sistemas existentes.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/nvr/avigilon-rm6-wks-datasheet-es-rev3.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v27.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v27.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v27.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">Analog Video Encoders</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Es una forma rentable de migrar su sistema analógico heredado a un sistema IP basado en red.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/nvr/avigilon-enc-4p-h264-datasheet-en-rev12.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
-              <article class="thumbnail thumbnail-classic thumbnail-md">
-                <div class="thumbnail-classic-figure"><img src="images/mini-productos/producto-v28.jpg" alt="" width="420" height="350"/>
-                </div>
-                <div class="thumbnail-classic-caption">
-                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/producto-v28.jpg" data-lightgallery="item"><img src="images/principal-productos/producto-v28.jpg" alt="" width="420" height="350"/></a>
-                    <h5 class="thumbnail-classic-title">IP Horn Speaker</h5>
-                  </div>
-                  <p class="thumbnail-classic-text texto-justificado">Permite a los equipos de seguridad ofrecer anuncios claros y responder rápidamente a posibles eventos de seguridad.</p><br>
-                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/speaker/IP%20Horn%20Speaker%20Datasheet-2022.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
-                </div>
-              </article>
-            </div>
-
           </div>
         </div>
       </section> 
