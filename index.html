@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="es">
+  <head>
+    <title>AMK Trading</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Poppins:400,500,600%7CTeko:300,400,500%7CMaven+Pro:500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  
+    <style>
+      .isotope-filters-list li {
+        display: inline-block;
+        margin-right: 10px; /* Espacio entre los botones */
+      }
+    
+      .isotope-filters-list li a {
+        display: inline-block;
+        padding: 10px 20px; /* Ajusta el padding según sea necesario */
+        background-color: #c2c2c2; /* Color de fondo de los botones sin seleccionar */
+        color: #fff; /* Color del texto de los botones sin seleccionar */
+        border-radius: 5px; /* Bordes redondeados */
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave del color de fondo y del color del texto */
+        font-size: 16px; /* Tamaño de letra */
+      }
+    
+      .isotope-filters-list li a:hover {
+        background-color: #123777; /* Cambia el color de fondo al pasar el cursor */
+        color: #fff; /* Cambia el color del texto al pasar el cursor */
+      }
+    
+      .isotope-filters-list li a.active {
+        background-color: #2e5393; /* Color de fondo de los botones seleccionados */
+        color: #fff; /* Color del texto de los botones seleccionados */
+      }
+    
+      /* Establecer el color del texto en blanco para el menú y submenú */
+      .rd-navbar-nav a, .rd-navbar-dropdown a {
+        color: #fff;
+      }
+    </style>
+
+<!-- <style>
+  /* Establecer el color del texto en blanco para el menú y submenú */
+  .rd-navbar-nav a, .rd-navbar-dropdown a {
+    color: #fff;
+  }
+
+  /* Establecer el color de fondo de la flecha en blanco */
+  .rd-navbar-toggle span {
+    background-color: #fff;
+  }
+</style> -->
+
+    
+
+    <style>
+      /* Color de fondo del navbar cuando se desplaza */
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck,
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-submenu,
+      .rd-navbar.rd-navbar-static.rd-navbar--is-stuck .rd-navbar-dropdown {
+        /* background-color: #adbddd; Color gris claro */
+        background-color: #2e5393; /* Color gris claro */
+      }
+
+      /* Color de fondo del navbar al estar fijo */
+      .rd-navbar.rd-navbar-static,
+      .rd-navbar.rd-navbar-static .rd-navbar-submenu,
+      .rd-navbar.rd-navbar-static .rd-navbar-dropdown {
+        background-color: #2e5393; /* Color gris claro */
+      }
+    </style>
+
+
+
+    
+    
+    
+
+  <!-- Geolocalización -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style>
+    .float2 {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 40px;
+        right: 40px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .my-float2 {
+        margin-top: 16px;
+    }
+    </style>
+  <!-- Geolocalización -->
+  
+  </head>
+  <body>
+
+  <!-- Geolocalización -->
+    <a href="#" class="float2" id="whatsappLink" target="_blank">
+      <i class="fa fa-whatsapp my-float2"></i>
+    </a>
+
+    <script>
+    // Función para obtener la ubicación del usuario
+    function obtenerUbicacion() {
+        // Verificar si el navegador soporta la geolocalización
+        if (navigator.geolocation) {
+            // Obtener la posición actual del usuario
+            navigator.geolocation.getCurrentPosition(function(position) {
+                // Obtener la latitud y longitud
+                var latitud = position.coords.latitude;
+                var longitud = position.coords.longitude;
+
+                // Llamar a un servicio de geolocalización IP para obtener la información del país
+                var url = "https://api.ipgeolocation.io/ipgeo?apiKey=857b03339c3e8f&lat=" + latitud + "&lon=" + longitud;
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Verificar el código del país y establecer el número de teléfono correspondiente
+                        var telefono;
+                        switch (data.country_code2) {
+                            case "HN": // Honduras
+                            case "GT": // Guatemala
+                                telefono = "5041";
+                                break;
+                            case "SV": // El Salvador
+                                telefono = "5042";
+                                break;
+                            default: // Otros países
+                                telefono = "5043";
+                                break;
+                        }
+
+                        // Construir el enlace de WhatsApp con el número de teléfono correcto
+                        var enlaceWhatsapp = "https://api.whatsapp.com/send?phone=" + telefono + "&text=Hola,%20estoy%20%20interesado...";
+
+                        // Establecer el atributo href del enlace
+                        document.getElementById("whatsappLink").setAttribute("href", enlaceWhatsapp);
+                    })
+                    .catch(error => {
+                        console.error('Error al obtener la ubicación: ', error);
+                    });
+            });
+        } else {
+            console.error('La geolocalización no está disponible en este navegador.');
+        }
+    }
+
+    // Llamar a la función para obtener la ubicación cuando la página cargue
+    window.onload = obtenerUbicacion;
+    </script>
+  <!-- Geolocalización -->
+
+    <!-- <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div> -->
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="cssload-container"><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div id="home">
+        <header class="section page-header">
+          <div class="rd-navbar-wrap">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+              <div class="rd-navbar-main-outer">
+                <div class="rd-navbar-main">
+                  <div class="rd-navbar-panel">
+                    <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                    <div class="rd-navbar-brand"><a class="brand" href="index.html"><img src="images/logo-default-223x50.png" alt="" width="223" height="50"/></a></div>
+                  </div>
+                  <div class="rd-navbar-main-element">
+                    <div class="rd-navbar-nav-wrap">
+                      <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item active"><a class="rd-nav-link" href="#home">| Inicio |</a></li>
+                        <li class="rd-nav-item rd-has-submenu">
+                          <a class="rd-nav-link" href="#projects">| Productos ↓ |</a>
+                          <ul class="rd-menu rd-navbar-dropdown">
+                            <li class="rd-dropdown-item rd-has-submenu">
+                              <a class="rd-dropdown-link" href="#projects">▪️ Radios de Dos Vías</a>
+                              <ul class="rd-menu rd-navbar-dropdown">
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Portatiles</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio DEP450</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio EP350</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio R7</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio R2</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio APX 3000</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio APX 5000</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio DGP8550E</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Radio VX-80-G6-4</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Radio Base</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ RADIO DEM400</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ RADIO DGM8500e</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Wave PTX</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ TLK100</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ TLK150</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Radio Satelital</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ ICOM IC SAT 100</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">Accesorios para Radio de Dos Vías</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Power Supply para Radio Base</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Baterías</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Antenas</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Clips</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Cargador Unitario</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Multicargadores</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+
+                            <li class="rd-dropdown-item rd-has-submenu">
+                              <a class="rd-dropdown-link" href="#projects">▪️ Cámaras de Vigilancia</a>
+                              <ul class="rd-menu rd-navbar-dropdown">
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Cámaras para Uso Comercial</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Minidomo H6</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H5 Pro</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Tipo ojo de pez H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Para esquinas H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ De doble cabezal H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Modulares H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ PTZ H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ PTZ IR H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ PTZ resistentes H5A</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H5SL</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H5M</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H4 Multisensor</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H4 Thermal</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Accesorios fijos para la cámara</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Sistemas Integrados para Seguridad Pública</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Integraciones de Motorola Solutions</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Detección de Cámaras Ocultas (CWD)</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Orchestrate</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Solución de Reconocimiento de Matrículas</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Vehicle Manager Enterprise</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ H4 License Plate Capture Cameras</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ L6Q LPR Camera System</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            
+                            <li class="rd-dropdown-item rd-has-submenu">
+                              <a class="rd-dropdown-link" href="#projects">▪️ Microonda</a>
+                              <ul class="rd-menu rd-navbar-dropdown">
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Radios</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ ODU600</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ CTR 8300</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ LTE PRIVADA</a></li>
+                                  </ul>
+                                </li>
+
+                                <li class="rd-dropdown-item rd-has-submenu">
+                                  <a class="rd-dropdown-link" href="#projects">▪️ Enrutadores</a>
+                                  <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ IRU600</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ STR4500</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ CTR8540</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+
+                            <li class="rd-dropdown-item rd-has-submenu">
+                              <a class="rd-dropdown-link" href="#projects">▪️ Energía</a>
+                              <ul class="rd-menu rd-navbar-dropdown">
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Paneles Solares</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Bancos de batería</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Inversores</a></li>
+                                    <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#projects">▪️ Motor Generadores</a></li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                         
+                        <li class="rd-nav-item rd-has-submenu">
+                          <a class="rd-nav-link" href="#services">| Servicios ↓ |</a>
+                          <ul class="rd-menu rd-navbar-dropdown">
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Sitios de Repetición</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Enlace Microondas</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Instalación de Servicios de Vigilancia</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="#services">▪️ Soporte y Mantenimiento de Sitios de Repetición</a></li>
+                          </ul>
+                        </li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#team">| Acerca De |</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#news">| Reconocimientos - Labor Social |</a></li>
+                        <li class="rd-nav-item"><a class="rd-nav-link" href="#contacts">| Contacto |</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <!-- Swiper-->
+        <section class="section swiper-container swiper-slider swiper-slider-classic" data-loop="true" data-autoplay="3500" data-simulate-touch="true" data-direction="horizontal" data-nav="false">
+          <div class="swiper-wrapper text-center">
+            <div class="swiper-slide" data-slide-bg="images/slider1.jpg">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Soluciones tecnológicas <br>a la medida</h1>
+                  <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">AMK Trading cuenta con la experiencia necesaria para desarrollar proyectos con éxito y a la medida, según los requerimientos del cliente</p> -->
+                  <a class="button button-primary button-ujarak" href="#contacts" data-caption-animate="fadeInUp" data-caption-delay="200">¡Contáctanos!</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x7422.jpg">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Empresa líder en <br>radiocomunicación <br>en la región</h1>
+                  <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100"><b>AMK Trading</b> implementa tecnología de punta para proyectos de radiocomunicación, así como integración de sistemas de comunicaciones troncalizadas</p> -->
+                  <a class="button button-primary button-ujarak" href="#contacts" data-caption-animate="fadeInUp" data-caption-delay="200">¡Contáctanos!</a>
+                </div>
+              </div>
+            </div>       
+                 <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x7423.jpg">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Soluciones de <br>Comando y Control</h1>
+                  <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">Adopte tecnología de próxima generación con una integración auténtica de voz, datos y video, para poder responder de manera más inteligente y rápida a los incidentes a medida que se producen.</p> -->
+                  <a class="button button-primary button-ujarak" href="https://www.youtube.com/watch?v=tylE9MLl8mc"target="_blank" data-caption-animate="fadeInUp" data-caption-delay="200">Más Información</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x7424.jpg">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Soluciones tecnológicas para La seguridad nacional, defensa y protección civil.</h1>
+                  <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">Enfocados en el sector Gobierno como socio integrador de <b>Motorola Solutions</b></p> -->
+                  <a class="button button-primary button-ujarak" href="#contacts" data-caption-animate="fadeInUp" data-caption-delay="200">¡Contáctanos!</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/slider-1-slide-2-1770x7425.jpg">
+              <div class="swiper-slide-caption section-md">
+                <div class="container">
+                  <h1 data-caption-animate="fadeInLeft" data-caption-delay="0">Soluciones de Video Vigilancia y Cámaras de Seguridad </h1>
+                  <!-- <p class="text-width-large" data-caption-animate="fadeInRight" data-caption-delay="100">Enfocados en el sector Gobierno como socio integrador de <b>Motorola Solutions</b></p> -->
+                  <a class="button button-primary button-ujarak" href="#contacts" data-caption-animate="fadeInUp" data-caption-delay="200">¡Contáctanos!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      <!-- Swiper-->
+      </div>
+      <!-- See all services-->
+      <section class="section section-sm section-first bg-default text-center" id="services">
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-md-6 col-lg-6 col-xl-6 text-lg-left wow fadeInUp"><img src="images/index-2-415x592.png" alt="" width="498" height="592"/></div>
+            <div class="col-lg-7 col-xl-6">
+              <div class="row row-30">
+                <!-- <div class="col-sm-6 wow fadeInRight">
+                  <article class="box-icon-modern box-icon-modern-custom">
+                    <div>
+                      <h3 class="box-icon-modern-big-title">Lo que Ofrecemos</h3>
+                      <div class="box-icon-modern-decor"></div><a class="button button-primary button-ujarak" class="section swiper-container swiper-slider swiper-slider-classic" href="#services2">Ver Servicios</a>
+                    </div>
+                  </article>
+                </div> -->
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".1s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <img src="images/temporal/radio.png" alt="">
+                    <h5 class="box-icon-modern-title"><a href="#" onclick="javascript:return false;">VENTA <br>DE RADIOS</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Amplia gama en radio comunicadores a tu alcance para toda situación.</p>
+                </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".1s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <!-- <div class="box-icon-modern-icon linearicons-antenna"></div> -->
+                    <img src="images/temporal/antena.png" alt="">
+                    <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN DE SITIOS DE REPETICIÓN</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Cumpliendo con los mayores estándares de calidad y normas de la industria.</p>
+                  </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".2s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <!-- <div class="box-icon-modern-icon linearicons-thumbs-up2"></div> -->
+                    <img src="images/temporal/energia.png" alt="">
+                    <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN DE SOLUCIONES DE ENERGÍA</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Contamos con personal certificado en <b>"Motorola Solutions"</b> para ajustar los parámetros a sus sistemas.</p>
+                  </article>
+                </div>
+                <div class="col-sm-6 wow fadeInRight" data-wow-delay=".3s">
+                  <article class="box-icon-modern box-icon-modern-2">
+                    <!-- <div class="box-icon-modern-icon linearicons-wrench"></div> -->
+                    <img src="images/temporal/soporte.png" alt="">
+                    <h5 class="box-icon-modern-title"><a href="#" onclick="javascipt:return false;">INSTALACIÓN Y SOPORTE DE SITIOS DE REPETICIÓN</a></h5>
+                    <div class="box-icon-modern-decor"></div>
+                    <p class="box-icon-modern-text">Servicios de reparación, soporte remoto, reporte en sitio y mantenimiento preventivo.</p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+      <div id="services2"></div>
+    </div>
+      </section>
+
+      <section class="section section-sm section-fluid bg-default text-center">
+        <div class="container-fluid">
+          <!-- <h2>Detalle de Servicios</h2> -->
+          <div>
+
+          </div>
+          <h6>Desde su ordenador Deslice sobre la imágen para obtener más información acerca de nuestros servicios.</h6>
+          <div class="row row-30 isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group">
+            <div class="col-sm-6 col-lg-4 col-xxl-4 isotope-item wow fadeInRight" data-filter="Type 4">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/servicios/servicio-1.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap">
+                  <h5 class="thumbnail-classic-title">Instalación de Sitios de Repetición</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">AMK Trading ofrece instalación y suministro de torres de comunicaciones con su respectivo estudio de suelos, caseta de comunicaciones, sistema de respaldo eléctrico y demás, lo que garantiza un entorno y ambiente ideal para los equipos de comunicación y para mantener sus sistemas con la mayor disponibilidad posible.</p>
+                </div>
+              </article>
+              <h5 class="thumbnail-classic-title">Instalación de Sitios de Repetición</h5>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-4 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/servicios/servicio-2.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap">
+                  <h5 class="thumbnail-classic-title">Instalación de Soluciones de Energía</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Nuestro servicio de instalación y puesta en marcha le ayudara a sacar el mayor partido a sus sistemas comunicación. Los sistemas de radiocomunicación y de microondas correctamente instalados funcionan mejor, con más fiabilidad y disfrutan de una vida útil más larga.</p>
+                </div>
+              </article>
+              <h5 class="thumbnail-classic-title">Instalación de Soluciones de Energía</h5>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-4 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/servicios/servicio-3.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap">
+                  <h5 class="thumbnail-classic-title">Instalación y Soporte de Sistemas de Repetición</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">AMK Trading ofrece una cartera de servicios de apoyo completa y flexible para ayudar a garantizar la eficiencia operativa, una alta disponibilidad de sus redes y dispositivos. <br><br>Para asistencias por favor comunicarse al siguiente correo: <br><a href="mailto:soporte@amktradingsa.com"><b><u>soporte@amktradingsa.com</u></b></a></p>
+                </div>
+              </article>
+              <h5 class="thumbnail-classic-title">Instalación y Soporte de Sistemas de Repetición</h5>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      
+      <!-- Cta-->
+      <section class="section section-fluid bg-default">
+        <div class="parallax-container" data-parallax-img="images/parallax-1.jpg">
+          <div class="parallax-content section-xl context-dark bg-overlay-68 bg-mobile-overlay">
+            <div class="container">
+              <div class="row row-30 justify-content-end text-right">
+                <div class="col-sm-12">
+                  <h4 class="wow fadeInLeft text-center">“Nuestro objetivo principal es garantizar la satisfacción y el éxito de la comunicación 
+                                              de nuestros clientes a través de los radios de dos vías que ofrecemos, las instalaciones 
+                                              de sitios de comunicación y el mantenimiento de los mismos"</h4>
+                  <!-- <p>¡Trabajamos cada día para ofrecerte los Mejores productos y servicios en el área de telecomunicaciones!</p> -->
+                  <!-- <div class="group-sm group-middle group justify-content-end"><a class="button button-primary button-ujarak" href="#modalCta" data-toggle="modal">Get in Touch</a><a class="button button-white-outline button-ujarak" href="#">Learn More</a></div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Projects-->
+      <div id="projects"><br></div>
+      <section class="section section-sm section-fluid bg-default text-center" >
+        <div class="container-fluid">
+          <h2 class="wow fadeInLeft">Productos</h2>
+          <p class="quote-jean wow fadeInRight" data-wow-delay=".1s"><b>En nuestro portafolio, puede navegar por los productos disponibles que proveemos a nuestros clientes para diferentes propósitos. AMK Trading es socio integrador en la región, premiado por Motorola Solutions como "TOP SALES PERFORMER".</b></p>
+          <div class="isotope-filters isotope-filters-horizontal">
+            <button class="isotope-filters-toggle button button-md button-icon button-icon-right button-default-outline button-wapasha" data-custom-toggle="#isotope-3" data-custom-toggle-hide-on-blur="true" data-custom-toggle-disable-on-blur="true"><span class="icon fa fa-caret-down"></span>Filtrar</button>
+            <ul class="isotope-filters-list" id="isotope-3">
+              <li><a class="active" href="#" data-isotope-filter="*" data-isotope-group="gallery">Todos</a></li>
+              <li><a href="#" data-isotope-filter="Type 1" data-isotope-group="gallery">RADIOS DE DOS VÍAS</a></li>
+              <li><a href="#" data-isotope-filter="Type 2" data-isotope-group="gallery">ENLACES MICROONDAS</a></li>
+              <li><a href="#" data-isotope-filter="Type 3" data-isotope-group="gallery">SISTEMA DE VIGILANCIA</a></li>
+              <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">INSTRUMENTOS PARA MEDICIÓN DE METEREOLOGÍA E HIDROLOGÍA</a></li>
+              <!-- <li><a href="#" data-isotope-filter="Type 4" data-isotope-group="gallery">Energía</a></li> -->
+            </ul>
+          </div>
+          
+          <div class="row row-30 isotope" data-isotope-layout="fitRows" data-isotope-group="gallery" data-lightgallery="group">
+           
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/tkl100.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/tkl100.jpg" data-lightgallery="item"><img src="images/principal-productos/tkl100.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">TLK100<br>SISTEMA WAVE</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Diseñado para industrias tales como seguridad privada,transporte, construcción,  energía, y más. El radio de dos vías WAVE PTX nos mantiene conectados y enfocados con audio alto y claro, seguimiento de ubicación y Wi-Fi</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/MOTL_TLK100Radio_Brochure_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/wtm400platform.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/wtm400platform.jpg" data-lightgallery="item"><img src="images/principal-productos/wtm400platform.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">WTM 4000 Platform</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">La capacidad ultra alta de la plataforma protege su red del crecimiento del tráfico que se avecina y permitirá la implementación rápida de nuevos servicios.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1TqdE5ht2XNqgq-QVH3c6k3rVx1NmrylR/view?usp=sharing" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h6minidomecamara.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h6minidomecamara.jpg" data-lightgallery="item"><img src="images/principal-productos/h6minidomecamara.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H6 Mini Dome Camara</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El sistema de enlace de datos aerotransportado sincroniza el intercambio de ISR de gran aancho de banda entre plataformas tripuladas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h6-mini-dome/avigilon_h6-mini-dome_fact-sheet_0222_ld_v4_es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/niveldelagua.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/niveldelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/niveldelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Nivel del Agua</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Los sensores de nivel de agua y los sensores de flujo continuo OTT se acompañan de sistemas de telemetría y de OTT Hydrosystems para medir, recoger y transmitir datos sobre la velocidad y el nivel del agua en tiempo real.</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/tlk150.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/tlk150.jpg" data-lightgallery="item"><img src="images/principal-productos/tlk150.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">TLK150</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Opere de manera segura mientras conduce, gracias a la practicidad de PTT. Administre grupos de conversación y suscripciones en tiempo real.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/TLK150_Solution_Brief_ES_0820.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/iru600.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/iru600.jpg" data-lightgallery="item"><img src="images/principal-productos/iru600.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">IRU 600</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">ofrece una opción de potencia extra alta que ofrece una potencia de salida de hasta +39dBm, lo que da como resultado enlaces más largos con antenas más pequeñas y menores costos relacionados con la torre.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.launch3telecom.com/shared_media/datasheet/Eclipse%20IRU%20600%20(v2)%20ANSI%20Datasheet%20-%20July%202014.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5acamaraline.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5acamaraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5acamaraline.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5A Camera Line</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Para eventos potencialmente críticos, brindando una solución de seguridad de video más inteligente y poderosa.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a/avigilon-h5a-line-camera-datasheet-es-rev15.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/calidaddelagua.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/calidaddelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/calidaddelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Calidad del Agua</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">La medición de la cantidad y la calidad de aguas superficiales (canales descubiertos, ríos, embalses, lagos y estuarios) es uno de los pilares fundamentales del monitoring hidrológico</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/r7.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/r7.jpg" data-lightgallery="item"><img src="images/principal-productos/r7.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R7</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/DataSheet_MototrboR7_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/odu600.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/odu600.jpg" data-lightgallery="item"><img src="images/principal-productos/odu600.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">ODU 600</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Se conectan con un cable coaxial simple a una IDU. Ofrecen un rendimiento de sistema de radio líder en el mercado para minimizar la carga y los costos de la torre.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.lastmile.no/media/multicase/documents/aviat%20odu%20600%20etsi%20short%20datasheet%20-%20oct%202014.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camaraojodepezh5a.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/camaraojodepezh5a.jpg" data-lightgallery="item"><img src="images/principal-productos/camaraojodepezh5a.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Cámara ojo de pez H5A</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Es una solución rentable y fácil de instalar que proporciona vistas panorámicas de 360°</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-fe/avigilon-h5a-fisheye-camera-datasheet-es-rev3.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/caudaldelagua.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/caudaldelagua.jpg" data-lightgallery="item"><img src="images/principal-productos/caudaldelagua.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Caudal del Agua</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Determinar con sistemas de medición de flujo y caudal la cantidad de agua que fluye por un canal abierto es crucial para predecir la disponibilidad del agua, el riesgo de avenidas y la distribución del riego, entre otros.</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/r2.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/r2.jpg" data-lightgallery="item"><img src="images/principal-productos/r2.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">MOTOTRBO™ R2</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Proporcionando una cancelación de ruido, gran volumen y claridad de máximo nivel, el R7 sobresale en los casos donde las comunicaciones de audio pueden ser un reto.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/mototrbo_r2_datasheet_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/str4500.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/str4500.jpg" data-lightgallery="item"><img src="images/principal-productos/str4500.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">STR 4500</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Ofrece lo último en innovaciones de enlace troncal para admitir una capacidad de hasta 10 Gbps en distancias de enlace superiores a 100 km, incluso sobre el agua.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1Ubpg2BP2oULr2ZdhM8z4hGi4aGs0S47L/view?usp=share_link" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camarah5aptz.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/camarah5aptz.jpg" data-lightgallery="item"><img src="images/principal-productos/camarah5aptz.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Cámara H5A-PTZ</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Brinda cobertura de área amplia y detalles de largo alcance con zoom de hasta 36x para una conciencia situacional superior.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-ptz/avigilon-h5a-ptz-dome-2mp-camera-datasheet-es-la-rev3.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/sensoresmetereologicos.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/sensoresmetereologicos.jpg" data-lightgallery="item"><img src="images/principal-productos/sensoresmetereologicos.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Sensores Meteorológicos</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">OTT Hydromet ofrece una amplia variedad de sistemas de medición de precipitaciones, incluyendo disdrómetros láser de alta precisión y pluviómetros con distintas opciones de alimentación y telemetría para intervenciones en lugares remotos.</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx3000.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx3000.jpg" data-lightgallery="item"><img src="images/principal-productos/apx3000.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 3000</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Ya sea que sea un oficial encubierto o esté en operaciones especiales, necesita comunicarse de manera segura mientras se mezcla con el entorno.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/apx/APX_3000_NA_Datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/ctr8540.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/ctr8540.jpg" data-lightgallery="item"><img src="images/principal-productos/ctr8540.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">CTR 8540</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El enrutador combina radio (L1), Carrier Ethernet (L2) y es completamente actualizable por software a L3 IP/MPLS, todo en un solo dispositivo, lo que reduce drásticamente el TCO.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://tws-technologies.de/wp-content/uploads/aviat-ctr-8540-data-sheet-jan2015.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/camarah5airptz.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/pcamarah5airptz.jpg" data-lightgallery="item"><img src="images/principal-productos/camarah5airptz.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Cámara H5A IR PTZ</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Permite a los equipos de seguridad ver más en la oscuridad con un rango de iluminación IR automatizado de hasta 300 metros.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-ir-ptz/avigilon-h5airptz-camera-datasheet-es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/armarios.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/armarios.jpg" data-lightgallery="item"><img src="images/principal-productos/armarios.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Armarios para Transmision y Almacenamiento de Datos en Campo</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Sólidos armarios de distribución con cerradura de OTT MetSystems para las estaciones meteorológicas automáticas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/video-archive/avigilon-video-archive-datasheet-en-v3-es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx5000.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx5000.jpg" data-lightgallery="item"><img src="images/principal-productos/apx5000.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 5000</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El APX 5000 P25 de banda única ha proporcionado la resistencia y confiabilidad legendarias de APX sin comprometer el tamaño o las funciones para actividades de rutina o emergencias extremas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_apx5000_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/ctr8300yeclipse.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/ctr8300yeclipse.jpg" data-lightgallery="item"><img src="images/principal-productos/ctr8300yeclipse.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">CTR 8300 y Eclipse</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Son ideales para el tráfico y el acceso de mantenimiento. Las IDU de microondas suelen admitir una combinación de interfaces TDM y Ethernet heredadas.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1OHDfFcTXE3LxjmJKAa0Ce_imgbq8KCte/view?usp=share_link" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5aruggedptz.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5aruggedptz.jpg" data-lightgallery="item"><img src="images/principal-productos/h5aruggedptz.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5A Rugged PTZ</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Funciona de manera continua y confiable en los entornos más hostiles y está diseñada para durar en aplicaciones de misión crítica.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-rugged-ptz/avigilon-h5a-rugged-ptz-camera-datasheet-es-rev3.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/radardebandas.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/radardebandas.jpg" data-lightgallery="item"><img src="images/principal-productos/radardebandas.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Radar de Banda S</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor de magnetrón o klystron de hasta 1 megavatio, los radares de banda S de Baron ofrecen una excelente detección del clima en todos los entornos.</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/apx900.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/apx900.jpg" data-lightgallery="item"><img src="images/principal-productos/apx900.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">APX™ 900</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El APX 900 está diseñado para obras públicas, servicios gubernamentales y organizaciones educativas que necesitan comunicación esencial a un precio asequible. Incluye la conectividad inalámbrica Bluetooth®. </p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/products/two-way-radios/apx/apx-900/apx_900_spec_sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/lteprivada.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/lteprivada.jpg" data-lightgallery="item"><img src="images/principal-productos/lteprivada.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">LTE Privada</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">La plataforma de grado industrial de Aviat Network, cuando se combina con el transporte inalámbrico de Aviat, es la solución LTE más asequible y confiable para pequeñas implementaciones industriales y rurales.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1PTbPRiB87AMI2HKJU0O6ypGcwsRyZMM8/view?usp=share_link" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5acornercamara.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5acornercamara.jpg" data-lightgallery="item"><img src="images/principal-productos/h5acornercamara.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5A Corner Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Sin agarre y con clasificación de impacto IK10+ que puede soportar los intentos más duros de destruirla, separarla, acoplarla o desactivarla.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-cr/avigilon-h5a-corner-camera-2-datasheet-es-rev2.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 4" data-wow-delay=".4s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/radardebandac.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/radardebandac.jpg" data-lightgallery="item"><img src="images/principal-productos/radardebandac.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Radar de Banda C</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles con un transmisor klystron de 1 megavatio o un transmisor magnetrón de 350 kilovatios, los radares de banda C de Baron ofrecen un rendimiento superior en cualquier condición climática.</p><br>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/vx80g64.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/vx80g64.jpg" data-lightgallery="item"><img src="images/principal-productos/vx80g64.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">VX-80-G6-4</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Pensada tanto para usuarios novatos como de nivel intermedio. Se trata de un radio portátil con todas las características necesarias para garantizar una comunicación confiable a un precio asequible.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/VX80_Datasheet_ES.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 2" data-wow-delay=".2s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/plataformasdegestion.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/plataformasdegestion.jpg" data-lightgallery="item"><img src="images/principal-productos/plataformasdegestion.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Plataformas de Gestión</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Brinda una administración de red integral, eficiente y transparente para redes de microondas TDM, Carrier Ethernet, híbridas e IP/MPLS.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://drive.google.com/file/d/1y7ctEFXOw32fQEoFRFXGpNdLegqosJVW/view?usp=share_link" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5adualheadcamera.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5adualheadcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h5adualheadcamera.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5A Dual Head Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Es una cámara de doble sensor rentable y de bajo perfil que proporciona una mayor cobertura de área e iluminación IR.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-dual-head/avigilon-h5a-dual-head-camera-datasheet-es-rev6.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dep450.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dep450.jpg" data-lightgallery="item"><img src="images/principal-productos/dep450.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DEP™ 450</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Simple y asequible, el radio digital portátil de dos vías DEP 450 es un radio para los usuarios que lo utilizan todos los días y desean permanecer conectados.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/mot_mtrbo_dep450_product_specsheet_es_digital.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5amodularcamera.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5amodularcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h5amodularcamera.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5A Modular Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Cámara más pequeña hasta el momento. Esta cámara flexible está diseñada específicamente para áreas con espacio limitado.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5a-modular/avigilon-h5a-modular-datasheet-es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dgp8550e.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dgp8550e.jpg" data-lightgallery="item"><img src="images/principal-productos/dgp8550e.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DGP™ 8550e</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente, estos radios de próxima generación ofrecen niveles máximos de conectividad para su organización.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/motl_dgp8000e_5000e_belize_datasheet_es_0920.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5slcameraline.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5slcameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5slcameraline.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5SL Camera Line</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Es una solución de seguridad versátil y rentable respaldada por una garantía líder en la industria.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5sl/avigilon-h5sl-combo-datasheet-es-rev10.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5mcameraline.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5mcameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5mcameraline.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5M Camera Line</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Para proyectos de videovigilancia con presupuesto limitado y es beneficiosa para sitios que requieren una cámara de lente fija para uso en exteriores.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5m/avigilon-H5M-dome-camera-datasheet-es-rev4.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850w.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850w.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850w.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850W</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Las tecnologías de roaming y retransmisión de saltos múltiples en esta radio de línea de vista de alta capacidad (HCLOS) admiten el intercambio de video y datos ISR de alta definición casi en tiempo real.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-08/cs-tcom-rf-7850w-hclos-radio-broadband-frequency-hopping-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h5procameraline.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h5procameraline.jpg" data-lightgallery="item"><img src="images/principal-productos/h5procameraline.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H5 Pro Camera Line</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Ofrece detalles de imagen sorprendentes, proporcionando simultáneamente la máxima cobertura de escena, al tiempo que minimiza el ancho de banda.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h5-pro/H5PRO-camera-datasheet-release_es-LA.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7800hmp.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7800hmp.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7800hmp.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7800H-MP</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">El Falcon III RF 7800H-MP emerge como el líder del mercado para manpacks HF de banda ancha Tipo 3, con capacidades ampliadas para entornos de largo alcance más allá de la línea de visión.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-tcom-rf-7800h-mp-wideband-hf-vhf-tactical-radio-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4multisensorcamera.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4multisensorcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4multisensorcamera.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H4 Multisensor Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Combina análisis de video de autoaprendizaje de Avigilon con una cobertura excepcional, con tres o cuatro sensores de cámara ajustables individualmente.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h4-multisensor/avigilon-h4a-mh-datasheet-es-rev13.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rover6s.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rover6s.jpg" data-lightgallery="item"><img src="images/principal-productos/rover6s.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">Rover 6S</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Frecuencias ampliadas, los recursos de procesamiento adicionales para el crecimiento de la capacidad, la modernización de Crypto Core y otras características mejoradas.</p><br>
+                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-10/cs-bcs-rover-6s-transceiver-sell-sheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4thermalcamera.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4thermalcamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4thermalcamera.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H4 Thermal Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Está diseñada para detectar la presencia y el movimiento de personas y vehículos en áreas con poca visibilidad.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h4-thermal/avigilon-h4-thermal-datasheet-es-rev5.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850d.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850d.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850d.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850D</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Manpack compacto de tres canales que ofrece MANET resistente y de alta velocidad por tierra, mar y aire, lo que respalda una imagen operativa común compartida en tiempo real.</p><br>
+                 <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2021-02/cs-tcom-rf-7850d-multi-channel-modular-system-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4thermalelevatedtemperature.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4thermalelevatedtemperature.jpg" data-lightgallery="item"><img src="images/principal-productos/h4thermalelevatedtemperature.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H4 Thermal Elevated Temperature Detection</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Para detectar rostros, medir la temperatura de la región interna del canto y notificar a los operadores.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h4-thermal-etd/avigilon-elevated-temperature-detection-solution-datasheet-es-la.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf7850mhh.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf7850mhh.jpg" data-lightgallery="item"><img src="images/principal-productos/rf7850mhh.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-7850M-HH</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Ofrece la potencia y el rendimiento de un manpack en un dispositivo portátil resistente compatible con SWAP. Equipado con capacidades de banda ancha, banda estrecha y arquitectura para el futuro.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2020-11/cs-tcom-rf-7850m-hh-multiband-networking-handheld-radio-datasheet.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 3" data-wow-delay=".3s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/h4lpccamera.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/h4lpccamera.jpg" data-lightgallery="item"><img src="images/principal-productos/h4lpccamera.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">H4 LPC Camera</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Está diseñada para capturar matrículas de vehículos, incluso en condiciones de iluminación difíciles.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://assets.avigilon.com/file_library/pdf/h4-lpc/avigilon-h4-lpc-datasheet-es-rev1.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dgm8500e.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dgm8500e.jpg" data-lightgallery="item"><img src="images/principal-productos/dgm8500e.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DGM™ 8500E</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">La Serie DGM™8000e ha sido diseñada para el profesional calificado que se niega a hacer concesiones. Con voz y datos de alto desempeño integrados y funciones avanzadas para un funcionamiento eficiente.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/XL-ES/motl_mototrbo_dgm8000e5000e_bali_ds_es.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/dem400.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/dem400.jpg" data-lightgallery="item"><img src="images/principal-productos/dem400.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">DEM™ 400</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Disponibles como radios móviles analógicos/digitales, con todos los beneficios de la tecnología más moderna</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.motorolasolutions.com/content/dam/msi/docs/business/products/two-way_radios/mobile_radios/wide_area_large_business_mobile_radios/cm200d/_documents/_staticfiles/mot_mototrbo_dem300_dem400_specsheet_es_080513.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/xlextreme400p.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/xlextreme400p.jpg" data-lightgallery="item"><img src="images/principal-productos/xlextreme400p.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">XL EXTREME 400P</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Conozca la única radio portátil diseñada de principio a fin con la información del bombero para ser un bombero rudo.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2023-11/l3harris-xl-extreme-400p-portable-radio-datasheet-cs.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+        
+            <div class="col-sm-6 col-lg-4 col-xxl-3 isotope-item wow fadeInRight" data-filter="Type 1" data-wow-delay=".1s">
+              <article class="thumbnail thumbnail-classic thumbnail-md">
+                <div class="thumbnail-classic-figure"><img src="images/mini-productos/rf9820s.jpg" alt="" width="420" height="350"/>
+                </div>
+                <div class="thumbnail-classic-caption">
+                  <div class="thumbnail-classic-title-wrap"><a class="icon fl-bigmug-line-zoom60" href="images/principal-productos/rf9820s.jpg" data-lightgallery="item"><img src="images/principal-productos/rf9820s.jpg" alt="" width="420" height="350"/></a>
+                    <h5 class="thumbnail-classic-title">RF-9820S</h5>
+                  </div>
+                  <p class="thumbnail-classic-text texto-justificado">Esta solución versátil y de bajo SWAP ofrece a los combatientes la flexibilidad de la próxima generación de MANET y la conectividad de línea de visión heredada.</p><br>
+                  <h7 class="thumbnail-classic-title"><a class="button button-default-outline button-wapasha" href="https://www.l3harris.com/sites/default/files/2022-03/cs-tcom-an-prc-171-compact-team-radio-datasheet-a.pdf" target="_blank"><u>Ver Ficha Técnica</u></a></h7>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section> 
+
+      <!-- https://drive.google.com/file/d/1TqdE5ht2XNqgq-QVH3c6k3rVx1NmrylR/view?usp=sharing AVIAT -->
+
+      <!-- https://assets.avigilon.com/file_library/pdf/h6-mini-dome/avigilon_h6-mini-dome_fact-sheet_0222_ld_v4_es-LA.pdf  AVIGILON--> 
+
+      <!-- ******************************************************************************************************************************************************************************************************* -->
+      <div id="team"><br></div>
+            <!-- Years of experience-->
+      <section class="section section-sm bg-default">
+        <div class="container col-md-10">
+          <h2>Acerca de Nosotros</h2>
+          <div class="row row-30 row-xl-24 justify-content-center align-items-center align-items-lg-start text-left">
+            <div class="col-md-7 col-lg-6 col-xl-5 text-center"><a class="text-img" href="#">
+                <div id="particles-js"></div><span class="counter">37</span></a></div>
+            <div class="col-sm-8 col-md-6 col-lg-5 col-xl-4">
+              <div class="text-width-extra-small offset-top-lg-24 wow fadeInUp">
+                <h3 class="title-decoration-lines-left">Años de Experiencia</h3>
+                <p><b>AMK Trading</b> cuenta con oficinas y representación en diversos países: <li class="text-azul"><b>Honduras (Sede Principal)</b></li> <li class="text-azul"><b>El Salvador</b></li> <li class="text-azul"><b>Guatemala</b></li> <li class="text-azul"><b>Panamá</b></li> <li class="text-azul"><b>Estados Unidos (Miami)</b></p>
+                  <!-- <p class="text-gray-500">RatherApp is a team of highly experienced app designers and developers creating unique software for you.</p><a class="button button-secondary button-pipaluk" href="#">Get in touch</a> -->
+              </div>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-6 col-xl-3 wow fadeInRight" data-wow-delay=".1s">
+              <div class="row justify-content-center border-2-column offset-top-xl-26">
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">6</span><span class="symbol">+</span>
+                    </div>
+                    <h6 class="counter-amy-title">Marcas</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">5</span>
+                    </div>
+                    <h6 class="counter-amy-title">Países</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">37</span>
+                    </div>
+                    <h6 class="counter-amy-title">Años</h6>
+                  </div>
+                </div>
+                <div class="col-9 col-sm-6">
+                  <div class="counter-amy">
+                    <div class="counter-amy-number"><span class="counter">3</span><span class="symbol">+</span>
+                    </div>
+                    <h6 class="counter-amy-title">Servicios</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-xl-12 align-self-center">
+              <div class="row row-30 justify-content-center">
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft"> <a class="clients-classic" href="https://www.motorolasolutions.com/" target="_blank"><img src="images/clients-3-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft" data-wow-delay=".2s"><a class="clients-classic" href="https://www.l3harris.com/" target="_blank"><img src="images/clients-4-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft" data-wow-delay=".3s"><a class="clients-classic" href="https://www.avigilon.com/" target="_blank"><img src="images/clients-9-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft" data-wow-delay=".4s"><a class="clients-classic" href="https://aviatnetworks.com/" target="_blank"><img src="images/clients-11-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft" data-wow-delay=".5s"><a class="clients-classic" href="https://baronweather.com/weather-radar/" target="_blank"><img src="images/clients-10-270x117.png" alt="" width="270" height="117"/></a></div>
+                <div class="col-sm-6 col-md-5 col-lg-6 col-xl-2 wow fadeInLeft" data-wow-delay=".7s"><a class="clients-classic" href="https://www.ott.com/" target="_blank"><img src="images/clients-13-270x118.png" alt="" width="270" height="117"/></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Documentación-->
+      <section class="section section-sm section-fluid bg-default">
+        <div class="container-fluid">
+          <h2>Documentos de Interés</h2>
+          <h6>Haga clic en el artículo de su interés para obtener más información</h6>
+          <div class="row row-sm row-30 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-2 wow fadeInRight">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1Vb1j_WNkyUoFs35BMMjxltCQulNqxjzo/view?usp=sharing"><img src="images/doc-1-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1Vb1j_WNkyUoFs35BMMjxltCQulNqxjzo/view?usp=sharing" target="_blank">MOTOTRBO & CAPACITY MAX</a></h4>
+                  <!-- <p class="team-classic-status">Director of Production</p> -->
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-2 wow fadeInRight" data-wow-delay=".1s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1m9ragwx7vtO42UMNNHPX61RgTglN9XoT/view?usp=sharing" target="_blank"><img src="images/doc-2-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1m9ragwx7vtO42UMNNHPX61RgTglN9XoT/view?usp=sharing" target="_blank">TRBONET PLUS</a></h4>
+                  <!-- <p class="team-classic-status">UI Designer</p> -->
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-2 wow fadeInRight" data-wow-delay=".2s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1vVYK9mDxlXz5L2B0ogdIi-VycBI1dgw_/view?usp=sharing" target="_blank"><img src="images/doc-3-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1vVYK9mDxlXz5L2B0ogdIi-VycBI1dgw_/view?usp=sharing" target="_blank">WAVE PTX</a></h4>
+                  <!-- <p class="team-classic-status">Senior Developer</p> -->
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-2 wow fadeInRight" data-wow-delay=".3s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1i5RC-aDgtbrSL3LBe8lTPLdyvs2IcTsb/view?usp=sharing" target="_blank"><img src="images/doc-4-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1i5RC-aDgtbrSL3LBe8lTPLdyvs2IcTsb/view?usp=sharing" target="_blank">AVIGILION CONTROL CENTER</a></h4>
+                  <!-- <p class="team-classic-status">Software Developer</p> -->
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-2 wow fadeInRight" data-wow-delay=".4s">
+              <!-- Team Classic-->
+              <article class="team-classic team-classic-lg"><a href="https://drive.google.com/file/d/1uT9cu7XRmPwzsmTXGH8wfPvSV9JCt64L/view?usp=share_link" target="_blank"><img src="images/doc-9-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="https://drive.google.com/file/d/1uT9cu7XRmPwzsmTXGH8wfPvSV9JCt64L/view?usp=share_link" target="_blank">SOLUCIONES DE COMANDO Y CONTROL</a></h4>
+                  <!-- <p class="team-classic-status">Software Developer</p> -->
+                </div>
+              </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meet The Team ******************************************************************************************************************************************************************************--> 
+        <section class="section section-sm section-fluid bg-default" id="team">
+          <!-- <div class="example"><br> -->
+        <div class="container-fluid">
+          <h2>AMK Trading CEO</h2>
+          <div class="row row-sm row-30 justify-content-center">
+            <div class="col-lg-4 col-xl-4 wow fadeInRight">
+              <article class="team-classic team-classic-lg"><a href="#" onclick="javascipt:return false;"><img src="images/team-11-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#" onclick="javascipt:return false;"><b>Philip Trudell</b></a></h4>
+                  <p class="team-classic-status"><b>CEO</b></p>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-4 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <!-- <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-11-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Nombre Apellido</a></h4>
+                  <p class="team-classic-status">Cargo</p>
+                </div>
+              </article> -->
+              <h3 class="box-contacts-link, thumbnail-classic-title">Philip Trudell</h3>
+              <p class="box-contacts-link, texto-justificado">"Nuestra participación en la integración de sistemas de comunicación exitosos hasta el momento y en particular el hecho de que seamos socios estratégicos de Motorola Solutions en 
+                Centroamérica testifican que hemos cumplido con los estándares, normas y reglas éticas internacionales. Por lo tanto, las alianzas comerciales que tenemos nos exigen aceptar y cumplir los estándares más estrictos del mundo, 
+                llevándonos a ser el mejor aliado en los grandes proyectos de telecomunicaciones en todos los lugares donde se nos necesite".
+              </p>
+            </div>
+            <!-- <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".2s">
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-13-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Nombre Apellido</a></h4>
+                  <p class="team-classic-status">Cargo</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay=".3s">
+              <article class="team-classic team-classic-lg"><a class="team-classic-figure" href="#"><img src="images/team-14-420x424.jpg" alt="" width="420" height="424"/></a>
+                <div class="team-classic-caption">
+                  <h4 class="team-classic-name"><a href="#">Nombre Apellido</a></h4>
+                  <p class="team-classic-status">Cargor</p>
+                </div>
+              </article>
+            </div> -->
+          </div>
+        </div>
+      <!-- </div> -->
+      </section>
+      <!-- Meet The Team ******************************************************************************************************************************************************************************--> 
+
+
+
+
+
+
+      <!-- You dream — we embody-->
+      <section class="section section-sm bg-default text-md-left">
+        <div class="container">
+          <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
+            <div class="col-lg-6 col-xl-5 wow fadeInLeft">
+              <h2>Conoce más acerca de Nosotros</h2>
+              <!-- Bootstrap tabs-->
+              <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big text-center text-md-left" id="tabs-6">
+                <!-- Nav tabs-->
+                <ul class="nav nav-tabs">
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big active" href="#tabs-6-1" data-toggle="tab">Misión</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-2" data-toggle="tab">Visión</a></li>
+                  <li class="nav-item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-3" data-toggle="tab">Valores</a></li>
+                  <!-- <li class="nav-item" role="presentation"><a class="nav-link nav-link-big" href="#tabs-6-4" data-toggle="tab">04</a></li> -->
+                </ul>
+                <!-- Tab panes-->
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="tabs-6-1">
+                    <!-- <h5 class="font-weight-normal"><b>Misión</b></h5> -->
+                    <p class="texto-justificado">Somos un equipo que brinda la solución en la integración de comunicación y seguridad a través de personal calificado, equipo de calidad, tecnología de punta y sistemas definidos para cumplir con los
+                      requisitos establecidos por el cliente.
+                    </p>
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">¡Contáctanos!</a></div> -->
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Learn More</a></div> -->
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-2">
+                    <!-- <h5 class="font-weight-normal">Tecnología de Punta</h5> -->
+                    <!-- <p>proyectos de radiocomunicación, defensa nacional, seguridad de aeropuertos, monitoreo de sistemas medioambientales y climatológicos, sistemas de seguridad nacional e integración de sistemas de comunicaciones troncalizadas.</p> -->
+                    
+                    <p class="texto-justificado">Ser empresa lider de la Región en las soluciones de conectividad, medio ambiente y seguridad nacional y civil ofreciendo una variedad de productos de alta calidad gracias a las relaciones
+                      estratégicas de diversas marcas representadas.
+                    </p>
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">¡Contáctanos!</a></div> -->
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Learn More</a></div> -->
+                  </div>
+                  <div class="tab-pane fade" id="tabs-6-3">
+                    <!-- <h5 class="font-weight-normal">Soluciones Tecnológicas</h5> -->
+                    <!-- <h5>Todos nuestros servicios cuenta con tecnología de punta para garantizar el correcto funcionamiento de las operaciones de cada ckiente.</h5> -->
+                    <p class="texto-justificado">Los valores de <b>AMK TRADING</b> se rigen por todo lo que hacemos con nuestros colaborodares hasta nuestros clientes. Juntos somos un equipo, unidos en nuestros propósitos de apoyar a las personas en hacer lo que necesitan en el momento adecuado, nos consideramos:</p>
+                    <p class="texto-justificado"><li class="texto-justificado"><b>Innovadores.</b></li>
+                      <li class="texto-justificado"><b>Apasionados.</b></li>
+                      <li class="texto-justificado"><b>Motivados.</b></li>
+                      <li class="texto-justificado"><b>Confiables.</b></li>
+                      <li class="texto-justificado"><b>Comprometidos.</b></li>
+                      <p class="texto-justificado">En <b>AMK TRADING</b> trabajamos unidos en brindar soluciones para las personas que hacen una diferencia critica protegiendo vidas y apoyando en sus comunidades. </p>
+                    </p>
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">¡Contáctanos!</a></div> -->
+                    <!-- <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">Get in touch</a><a class="button button-default-outline button-wapasha" href="#">Learn More</a></div> -->
+                  </div>
+                  <!-- <div class="tab-pane fade" id="tabs-6-4">
+                    <h5 class="font-weight-normal">Soporte y Mantenimiento</h5>
+                    <p>Cada cliente de AMK Trading puede obtener acceso a nuestro amable y calificado soporte los 365 días del año a través de correo electrónico o teléfono. ¡Siéntase libre de hacernos cualquier pregunta!</p>
+                    <div class="group-sm group-middle"><a class="button button-secondary button-pipaluk" href="#modalCta" data-toggle="modal">¡Contáctanos!</a></div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 text-center wow fadeInUp" data-wow-delay=".1s">
+              <div class="owl-carousel owl-style-1" data-items="2" data-stage-padding="0" data-loop="true" data-margin="0" data-mouse-drag="true" data-autoplay="true"><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-7-313x580.png" alt="" width="313" height="580"/></a><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-2-313x580.png" alt="" width="313" height="580"/></a><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-3-313x580.png" alt="" width="313" height="580"/></a><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-4-313x580.png" alt="" width="313" height="580"/></a><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-5-313x580.png" alt="" width="313" height="580"/></a><a class="box-device" href="#" onclick="javascipt:return false;"><img src="images/index-6-313x580.png" alt="" width="313" height="580"/></a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What people Say *****************************************************************************************************************************************************************************************************************************************************-->
+      <!-- <section class="section section-sm section-bottom-70 section-fluid bg-default">
+        <div class="container-fluid">
+          <h2>Lo que dicen nuestros clientes - * Propuesta</h2>
+          <div class="row row-50 row-sm">
+            <div class="col-md-6 col-xl-4 wow fadeInRight">
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-11-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Nombre Apellido</a></h4>
+                    <p class="quote-modern-status">Cliente Regular</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">Breve comentario referente a la organización.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 wow fadeInRight" data-wow-delay=".1s">
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-12-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Nombre Apellido</a></h4>
+                    <p class="quote-modern-status">Cliente Regular</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">Breve comentario referente a la organización.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 wow fadeInRight" data-wow-delay=".2s">
+              <article class="quote-modern quote-modern-custom">
+                <div class="unit unit-spacing-md align-items-center">
+                  <div class="unit-left"><a class="quote-modern-figure" href="#"><img class="img-circles" src="images/user-20-75x75.jpg" alt="" width="75" height="75"/></a></div>
+                  <div class="unit-body">
+                    <h4 class="quote-modern-cite"><a href="#">Nombre Apellido</a></h4>
+                    <p class="quote-modern-status">Cliente Regular</p>
+                  </div>
+                </div>
+                <div class="quote-modern-text">
+                  <p class="q">Breve comentario referente a la organización.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Pricing-->
+      <!-- <section class="section section-sm section-bottom-70 section-fluid bg-default">
+        <div class="container">
+          <h2>Pricing</h2>
+          <div class="row row-30 justify-content-center">
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">basic</h5>
+                  <h3 class="box-pricing-price">$500.00</h3>
+                  <div class="box-pricing-time">starting at</div>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span>Basic</span>
+                  </div>
+                  <ul class="box-pricing-list">
+                    <li class="active">Concept development</li>
+                    <li class="active">UI design</li>
+                    <li>Configuration management</li>
+                    <li>Software quality assurance</li>
+                    <li>App integration</li>
+                  </ul>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-gray-4" href="#">Get started</a></div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black box-pricing-popular">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">Optimal</h5>
+                  <h3 class="box-pricing-price">$800.00</h3>
+                  <div class="box-pricing-time">starting at</div>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span>Optimal</span>
+                  </div>
+                  <ul class="box-pricing-list">
+                    <li class="active">Concept development</li>
+                    <li class="active">UI design</li>
+                    <li class="active">Configuration management</li>
+                    <li class="active">Software quality assurance</li>
+                    <li>App integration</li>
+                  </ul>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="#">Get started</a></div>
+                <div class="box-pricing-badge">popular</div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">Ultimate</h5>
+                  <h3 class="box-pricing-price">$1200.00</h3>
+                  <div class="box-pricing-time">starting at</div>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span>Ultimate</span>
+                  </div>
+                  <ul class="box-pricing-list">
+                    <li class="active">Concept development</li>
+                    <li class="active">UI design</li>
+                    <li class="active">Configuration management</li>
+                    <li class="active">Software quality assurance</li>
+                    <li class="active">App integration</li>
+                  </ul>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-gray-4" href="#">Get started</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> *************************************************************************************************************************************************************************************************************************************************************** -->
+
+      <!-- Latest blog posts-->
+      <DIV id="news"><br></DIV>
+      <section class="section section-sm bg-default">
+      <!-- <div class="example"><br> -->
+        <div class="container">
+          <h2>Reconocimientos | Labor Social</h2>
+          <div class="row row-45">
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="#" onclick="javascipt:return false;"><img src="images/post-10-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-04"><span class="post-modern-time-number">2018</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="#" onclick="javascipt:return false;"><b>Premio</b> EMPOWER CIRCLE Top Saler Performer</a></h4>
+                <p class="post-modern-text"><b>AMK Trading</b> ha sido galardonado por <b>Motorola Solutions</b> como uno de sus principales socios integradores en la región.</p>
+              </article>
+            </div>
+            
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".1s">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="#" onclick="javascipt:return false;"><img src="images/post-12-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-22"><span class="post-modern-time-number">2019</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="#" onclick="javascipt:return false;">Fundación Zamora Terán</a></h4>
+                <p class="post-modern-text"><b>AMK Trading</b>, es donante <b>ORO</b> en la Fundación <b>ZAMORA TERÁN</b>, la cual ayuda a formar a los niños de la región con los más altos estándares de calidad educativa.</p>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="#" onclick="javascipt:return false;"><img src="images/post-11-titulo.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-17"><span class="post-modern-time-number">2022</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="#" onclick="javascipt:return false;">Reconocimiento Tiburones</a></h4>
+                <p class="post-modern-text">Reconocimiento obtenido como agradecimiento por el apoyo brindado al equipo Tiburones en el torneo de la Comisión Nacional del Deporte, Educación Física y Recreación</p>
+              </article>
+            </div>
+
+            <div class="col-sm-6 col-lg-3 wow fadeInLeft" data-wow-delay=".2s">
+              <!-- Post Modern-->
+              <article class="post post-modern"><a class="post-modern-figure" href="#" onclick="javascipt:return false;"><img src="images/post-11-370x307.jpg" alt="" width="370" height="307"/>
+                  <div class="post-modern-time">
+                    <time datetime="2019-07-18"><span class="post-modern-time-number">2023</span></time>
+                  </div></a>
+                <h4 class="post-modern-title"><a href="#" onclick="javascipt:return false;">Reconocimiento</a></h4>
+                <p class="post-modern-text">El mejor premio para AMK Trading es ser reconocido por cada uno de sus clientes como una empresa capaz de brindar y cerrar proyectos de calidad y mejorar de forma significativa el funcionamiento, operación y eficiencia de cada uno de sus clientes.</p>
+              </article>
+            </div>
+            </div>
+          </div>
+        <!-- </div>  -->
+      </section>
+
+      <!-- Contact information-->
+      <!-- <DIV id="contacts"><br><br></DIV>
+      <section class="section section-sm bg-default" >
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-sm-10 col-md-8 col-lg-6">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><b>📍 Honduras:</b><br>+504 2262 2658<br><br><b>📍 El Salvador:</b><br>+503 2528-0400<br><br><b>📍 Guatemala:</b><br>+502 4011-1170 <br>&nbsp </p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-10 col-md-8 col-lg-6">
+              <article class="box-contacts">
+                <div class="box-contacts-body">
+                  <div class="box-contacts-icon fl-bigmug-line-up104"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><b>📍 Honduras:</b><br>Ofibodegas RAPACO, Teg.<br><br><b>📍 El Salvador:</b><br>81 Avenida Norte #826<br><br><b>📍 Guatemala:</b><br>Aeropuerto Internacional La Aurora, Hangar 70</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Pricing-->
+      <div id="contacts"><br></div>
+      <section class="section section-sm section-bottom-70 section-fluid bg-default">
+        <div class="container">
+          <h2>Información de Contacto</h2>
+          <div class="row row-30 justify-content-center">
+            
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">Honduras</h5>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span></span>
+                  </div>
+                  <p class="box-contacts-link">
+                    <b>📍Ubicación:</b><br>
+                    Ofibodegas RAPACO, contiguo a Gasolinera Uno, Tegucigalpa.<br><br>
+                    <b>☎️ Teléfono:</b><br>
+                    <a href="tel:+5042262-2658">+504 2262-2658</a><br><br>
+                    <img src="images/logo_wp.png" alt="Logo de WhatsApp" width="20" height="20"><b> WhatsApp:</b><br>
+                    <a href="https://wa.me/50431938189" target="_blank">+504 9899-9966</a>
+                </p><br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.4189730174417!2d-87.18329058474329!3d14.052419194041024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbdb4a39091ab%3A0x9af673b163399a8c!2sAMK%20Trading%20S.A.%20de%20C.V.!5e0!3m2!1ses!2shn!4v1665919758824!5m2!1ses!2shn" width="260" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="https://goo.gl/maps/1k5UbyAP72UzuxBT8" target="_blank">Ver indicaciones</a></div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">El Salvador</h5>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span></span>
+                  </div>
+                  <p class="box-contacts-link">
+                    <b>📍Ubicación:</b><br>
+                    81 Avenida Norte #826, Colonia Escalón, San Salvador.<br><br>
+                    <b>☎️ Teléfono:</b><br>
+                    <a href="tel:+50325280400">+503 2528-0400</a><br><br>
+                    <img src="images/logo_wp.png" alt="Logo de WhatsApp" width="20" height="20"><b> WhatsApp:</b><br>
+                    <a href="https://wa.me/50378734508" target="_blank">+503 7873-4508</a>
+                </p><br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.1485078181668!2d-89.23638147153859!3d13.70945393707549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f633017494b7c75%3A0x5c36320bdee65f1f!2s81%20Avenida%20Nte.%20826%2C%20San%20Salvador%2C%20El%20Salvador!5e0!3m2!1ses!2shn!4v1665926907372!5m2!1ses!2shn" width="260" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="https://goo.gl/maps/9XSd8WMGJ1pX9DJB7" target="_blank">Ver indicaciones</a></div>
+                <div class="box-pricing-badge">popular</div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-5 col-xl-4">
+              <div class="box-pricing box-pricing-black">
+                <div class="box-pricing-body">
+                  <h5 class="box-pricing-title">Guatemala</h5>
+                  <div class="box-pricing-divider">
+                    <div class="divider"></div><span></span>
+                  </div>
+                  <p class="box-contacts-link">
+                    <b>📍Ubicación:</b><br>
+                    Aeropuerto Internacional La Aurora, Hangar 7, 11 Avenida y 15 Calle, Zona 13.<br><br>
+                    <b>☎️ Teléfono:</b><br>
+                    <a href="tel:+5024011-1170">+502 4011-1170</a><br><br>
+                    <img src="images/logo_wp.png" alt="Logo de WhatsApp" width="20" height="20"><b> WhatsApp:</b><br>
+                    <a href="https://wa.me/50431938189" target="_blank">+504 3193-8189</a>
+                  </p><br>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.2323884551365!2d-90.5321957341256!3d14.585829781346275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a15f18a23e65%3A0xa8d9f9b1ae2d4eca!2sAeropuerto%20Internacional%20La%20Aurora!5e0!3m2!1ses!2shn!4v1665927496900!5m2!1ses!2shn" width="260" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="box-pricing-button"><a class="button button-lg button-block button-primary" href="https://goo.gl/maps/MwzpQrj13mTvCzQ2A" target="_blank">Ver indicaciones</a></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+        <!-- <section class="section section-sm section-last bg-default text-left">
+        <div class="container">
+          <article class="title-classic">
+            <div class="title-classic-title">
+              <h3>Póngase en Contacto</h3>
+            </div>
+            <div class="title-classic-text">
+              <p>Si tiene alguna pregunta, solo complete el formulario de contacto y le responderemos a la brevedad.</p>
+            </div>
+          </article>
+          
+        <form method="post" action="enviar.php" id="contact-form" class="rd-form rd-form-variant-2">
+          <div class="row row-14 gutters-14">
+            <div class="col-md-4">
+              <div class="form-group">
+                <input class="form-input" type="text" id="nombre" name="name" placeholder="Nombre*" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input class="form-input" type="email" id="correo" name="email" placeholder="Correo Electrónico*" required>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <input class="form-input" type="text" id="telefono" name="phone" placeholder="Teléfono*" required>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-group">
+                <textarea class="form-input textarea-lg" id="mensaje" name="message" placeholder="Mensaje*"></textarea>
+              </div>
+            </div>
+          </div>
+          <button class="button button-primary button-pipaluk" id="enviar" type="submit" class="theme-btn" name="submit-form">Enviar Mensaje</button>
+        </form>
+          <br>
+        </div>
+      </section> -->
+
+      <section class="section section-sm section-last bg-default text-left">
+        <div class="container">
+          <div class="row">
+            <!-- Columna para la imagen -->
+            <div class="col-md-6">
+              <img src="images/temporal/61.jpg" alt="Imagen" class="img-fluid h-100">
+            </div>
+            <!-- Columna para el formulario -->
+            <div class="col-md-6">
+              <article class="title-classic">
+                <div class="title-classic-title">
+                  <h3>Póngase en Contacto</h3>
+                </div>
+              </article>
+              <br>
+                <div>
+                  <p>Si tiene alguna pregunta, solo complete el formulario de contacto y le responderemos a la brevedad.</p>
+                </div>
+              <form method="post" action="enviar.php" id="contact-form" class="rd-form rd-form-variant-2">
+                <div class="row row-14 gutters-14">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-input" type="text" id="nombre" name="name" placeholder="Nombre*" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-input" type="email" id="correo" name="email" placeholder="Correo Electrónico*" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-input" type="text" id="telefono" name="phone" placeholder="Teléfono*" required>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-input textarea-lg" id="mensaje" name="message" placeholder="Mensaje*"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="button button-primary button-pipaluk" id="enviar" type="submit" class="theme-btn" name="submit-form">Enviar Mensaje</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+
+
+      <!-- Bottom Banner-->
+      <!-- <section class="section section-fluid"><a class="section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/banner-bg-01-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/banner-bg-01-1920x310.jpg) 1x, url(images/banner/banner-bg-01-3840x620.jpg) 2x )" target="_blank"><img src="images/banner/banner-fg-01-1600x310.png" srcset="images/banner/banner-fg-01-1600x310.png 1x, images/banner/banner-fg-01-3200x620.png 2x" alt="" width="1600" height="310"></a></section> -->
+
+
+      <!-- Maps -->
+      <!-- <section class="section section-sm bg-default" >
+        <div class="container">
+          <div class="row row-30 justify-content-center">
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body"><br>
+                  <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><b>📍 Honduras:</b><br>+504 2262 2658<br><br><b>📍 El Salvador:</b><br>+503 2528-0400<br><br><b>📍 Guatemala:</b><br>+502 4011-1170 <br>&nbsp </p>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.4189730174417!2d-87.18329058474329!3d14.052419194041024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fbdb4a39091ab%3A0x9af673b163399a8c!2sAMK%20Trading%20S.A.%20de%20C.V.!5e0!3m2!1ses!2shn!4v1665919758824!5m2!1ses!2shn" width="255" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <br><br>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body"><br>
+                  <div class="box-contacts-icon fl-bigmug-line-up104"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><b>📍 Honduras:</b><br>Ofibodegas RAPACO, Teg.<br><br><b>📍 El Salvador:</b><br>81 Avenida Norte #826<br><br><b>📍 Guatemala:</b><br>Aeropuerto Internacional La Aurora, Hangar 70</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-8 col-md-6 col-lg-4">
+              <article class="box-contacts">
+                <div class="box-contacts-body"><br>
+                  <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
+                  <div class="box-contacts-decor"></div>
+                  <p class="box-contacts-link"><br>&nbsp <br>&nbsp <br>&nbsp  info@amktradingsa.com<br>&nbsp <br>&nbsp <br>&nbsp <br>&nbsp <br>&nbsp <br>&nbsp  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      
+
+
+      <!-- <section class="section section-sm section-last bg-default text-left" id="contacts">
+        <div class="container">
+          <article class="title-classic">
+            <div class="title-classic-title">
+              <h3>* Sección de Mapas en Construcción <br>*****************************</h3>
+            </div>
+        </div>
+      </section> -->
+
+      <!-- Page Footer-->
+      <!-- <div class="examplefooter"> -->
+      <div class="bg-gray-15">
+      <footer class="section section-fluid footer-minimal context-dark">
+        <!-- <div class="bg-gray-15"> -->
+          <div class="container-fluid">
+            <!-- <div class="footer-minimal-inset oh">
+              <ul class="footer-list-category-2">
+                <li><a href="#">UI Design</a></li>
+                <li><a href="#">Windows/Mac OS Apps</a></li>
+                <li><a href="#">Android/iOS Apps</a></li>
+                <li><a href="#">Cloud Solutions</a></li>
+                <li><a href="#">Customer Support</a></li>
+              </ul>
+            </div> -->
+            <div class="footer-minimal-bottom-panel text-sm-left">
+              <div class="row row-10 align-items-md-center">
+                <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+                  <div>
+                    <ul class="list-inline list-inline-sm footer-social-list-2">
+                      <!-- <li><a class="icon fa fa-facebook" href="https://www.facebook.com" target="_blank"></a></li> -->
+                      <!-- <li><a class="icon fa fa-twitter" href="https://www.twitter.com/" target="_blank"></a></li> -->
+                      <li><a style="color: #fff" class="icon fa fa-facebook" href="https://www.facebook.com/profile.php?id=61557301682607&mibextid=JRoKGi" target="_blank"></a></li>
+                      <li><a style="color: #fff" class="icon fa fa-instagram" href="https://www.instagram.com/trading.amk?igsh=NDkxZngwYnBnNjM4" target="_blank"></a></li>
+                      <li><a style="color: #fff" class="icon fa fa-linkedin" href="https://www.linkedin.com/in/amk-trading-s-a-187ab2207/" target="_blank"></a></li>
+                      <!-- <li><a class="fab fa-ebay" href="https://www.instagram.com/" target="_blank"></a></li> -->
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-4 order-sm-first">
+                  <!-- Rights-->
+                  <p style="color: #fff" class="rights"><span>&copy;&nbsp;</span><span style="color: #fff" class="copyright-year"></span> <span style="color: #fff">AMK Trading S.A. de C.V. | Socio Integrador de Comunicaciones </span>
+                  </p>
+                </div>
+                <div class="col-sm-6 col-md-4 text-md-right" style="color: #fff;"><span>© Todos los Derechos Reservados</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- </div> -->
+      </footer>
+
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=50499990000&text=Hola,%20estoy%20%20interesado..." class="float2" target="_blank">
+      <i class="fa fa-whatsapp my-float2"></i>
+      </a> -->
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
